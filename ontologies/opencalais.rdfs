@@ -1,0 +1,2646 @@
+<rdf:RDF           
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">                      
+     
+    <rdf:Description rdf:about="http://s.opencalais.com/1"/>
+    		
+    
+    <!-- 
+        ///////////////////////////////////////////////////////////////////////////////////////
+        //
+        // Classes
+        //
+        ///////////////////////////////////////////////////////////////////////////////////////
+         -->
+    
+
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/cat/DocCat">
+            <rdfs:label>DocCat</rdfs:label>
+        <rdfs:comment>The type of an extracted content category/topic</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Anniversary">
+            <rdfs:label>Anniversary</rdfs:label>
+        <rdfs:comment>Describes an entity that is a reference to an anniversary</rdfs:comment>
+        </rdfs:Class>        
+  
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/City">
+            <rdfs:label>City</rdfs:label>
+        <rdfs:comment>Describes an entity that is a city, village or settlement</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Company">
+            <rdfs:label>Company</rdfs:label>
+        <rdfs:comment>The type of an extracted company name</rdfs:comment>
+        </rdfs:Class>    
+    
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Continent">
+            <rdfs:label>Continent</rdfs:label>
+        <rdfs:comment>The type of an extracted continent name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Country">
+            <rdfs:label>Country</rdfs:label>
+        <rdfs:comment>The type of an extracted country name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Currency">
+            <rdfs:label>Currency</rdfs:label>
+        <rdfs:comment>The type of an extracted currency</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/EmailAddress">
+            <rdfs:label>EmailAddress</rdfs:label>
+        <rdfs:comment>The type of an extracted email address</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent">
+            <rdfs:label>EntertainmentAwardEvent</rdfs:label>
+        <rdfs:comment>The type of an extracted entertainment-related event or award</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Facility">
+            <rdfs:label>Facility</rdfs:label>
+        <rdfs:comment>The type of an extracted facility - a man-made physical entity</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/FaxNumber">
+            <rdfs:label>FaxNumber</rdfs:label>
+        <rdfs:comment>The type of an extracted fax number</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Holiday">
+            <rdfs:label>Holiday</rdfs:label>
+        <rdfs:comment>The type of an extracted holiday</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/IndustryTerm">
+            <rdfs:label>IndustryTerm</rdfs:label>
+        <rdfs:comment>The type of an extracted industry term</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/MarketIndex">
+            <rdfs:label>MarketIndex</rdfs:label>
+        <rdfs:comment>The type of an extracted market index</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/MedicalCondition">
+            <rdfs:label>MedicalCondition</rdfs:label>
+        <rdfs:comment>The type of an extracted medical condition</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/MedicalTreatment">
+            <rdfs:label>MedicalTreatment</rdfs:label>
+        <rdfs:comment>The type of an extracted medical treatment</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Movie">
+            <rdfs:label>Movie</rdfs:label>
+        <rdfs:comment>The type of an extracted movie name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/MusicAlbum">
+            <rdfs:label>MusicAlbum</rdfs:label>
+        <rdfs:comment>The type of an extracted music album name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/MusicGroup">
+            <rdfs:label>MusicGroup</rdfs:label>
+        <rdfs:comment>The type of an extracted music group name</rdfs:comment>
+        </rdfs:Class>
+        
+        
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/NaturalFeature">
+            <rdfs:label>NaturalFeature</rdfs:label>
+        <rdfs:comment>The type of an extracted natural feature</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/OperatingSystem">
+            <rdfs:label>OperatingSystem</rdfs:label>
+        <rdfs:comment>The type of an extracted operating system name</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Organization">
+            <rdfs:label>Organization</rdfs:label>
+        <rdfs:comment>The type of an extracted organization name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Person">
+            <rdfs:label>Person</rdfs:label>
+        <rdfs:comment>The type of an extracted person name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/PhoneNumber">
+            <rdfs:label>PhoneNumber</rdfs:label>
+        <rdfs:comment>The type of an extracted phone number</rdfs:comment>
+        </rdfs:Class>
+        
+     
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Position">
+            <rdfs:label>Position</rdfs:label>
+        <rdfs:comment>The type of an extracted person&#39;s position or job title</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Product">
+            <rdfs:label>Product</rdfs:label>
+        <rdfs:comment>The type of an extracted product name (drug, car models, electronics, etc.)</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage">
+            <rdfs:label>ProgrammingLanguage</rdfs:label>
+        <rdfs:comment>The type of an extracted programming language</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/ProvinceOrState">
+            <rdfs:label>ProvinceOrState</rdfs:label>
+        <rdfs:comment>The type of an extracted province, state or county name</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/PublishedMedium">
+            <rdfs:label>PublishedMedium</rdfs:label>
+        <rdfs:comment>The type of an extracted published medium - newspapers, magazines, etc.</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/RadioProgram">
+            <rdfs:label>RadioProgram</rdfs:label>
+        <rdfs:comment>The type of an extracted radio program</rdfs:comment>
+        </rdfs:Class>
+        
+     
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/RadioStation">
+            <rdfs:label>RadioStation</rdfs:label>
+        <rdfs:comment>The type of an extracted radio station</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Region">
+            <rdfs:label>Region</rdfs:label>
+        <rdfs:comment>The type of an extracted region</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/SportsEvent">
+            <rdfs:label>SportsEvent</rdfs:label>
+        <rdfs:comment>The type of an extracted sports event</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/SportsGame">
+            <rdfs:label>SportsGame</rdfs:label>
+        <rdfs:comment>The type of an extracted sports game</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/SportsLeague">
+            <rdfs:label>SportsLeague</rdfs:label>
+        <rdfs:comment>The type of an extracted sports league</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/TVShow">
+            <rdfs:label>TVShow</rdfs:label>
+        <rdfs:comment>The type of an extracted TV show</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/TVStation">
+            <rdfs:label>TVStation</rdfs:label>
+        <rdfs:comment>The type of an extracted TV station</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/Technology">
+            <rdfs:label>Technology</rdfs:label>
+        <rdfs:comment>The type of an extracted technology name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/e/URL">
+            <rdfs:label>URL</rdfs:label>
+        <rdfs:comment>The type of an extracted URL mention</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Acquisition">
+            <rdfs:label>Acquisition</rdfs:label>
+        <rdfs:comment>The type of an extracted acquisition relation between multiple companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Alliance">
+            <rdfs:label>Alliance</rdfs:label>
+        <rdfs:comment>The type of an extracted alliance relation between multiple companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate">
+            <rdfs:label>AnalystEarningsEstimate</rdfs:label>
+        <rdfs:comment>The type of an extracted analyst earnings estimate mentioned - estimates given by exgternal analysts regarding the forecasted earnings of companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/AnalystRecommendation">
+            <rdfs:label>AnalystRecommendation</rdfs:label>
+        <rdfs:comment>The type of an extracted stock recommendation mentioned - recommendation given by external analysts regarding the company&#39;s equity</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Arrest">
+            <rdfs:label>Arrest</rdfs:label>
+        <rdfs:comment>The type of an extracted arrest event</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Bankruptcy">
+            <rdfs:label>Bankruptcy</rdfs:label>
+        <rdfs:comment>The type of an extracted company's bankruptcy mention</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance">
+            <rdfs:label>BonusSharesIssuance</rdfs:label>
+        <rdfs:comment>The type of an extracted bonus shares issuance</rdfs:comment>
+        </rdfs:Class>
+        
+     
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/BusinessRelation">
+            <rdfs:label>BusinessRelation</rdfs:label>
+        <rdfs:comment>The type of an extracted business relation mentioned between multiple companies</rdfs:comment>
+        </rdfs:Class>
+        
+ 
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Buybacks">
+            <rdfs:label>Buybacks</rdfs:label>
+        <rdfs:comment>The type of an extracted buyback event</rdfs:comment>
+        </rdfs:Class>
+        
+     
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyAffiliates">
+            <rdfs:label>CompanyAffiliates</rdfs:label>
+        <rdfs:comment>The type of an extracted parent-subsidiary relation between two companies</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyCompetitor">
+            <rdfs:label>CompanyCompetitor</rdfs:label>
+        <rdfs:comment>The type of an extracted competition relation between two companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyCustomer">
+            <rdfs:label>CompanyCustomer</rdfs:label>
+        <rdfs:comment>The type of an extracted supplier-customer relation between two companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement">
+            <rdfs:label>CompanyEarningsAnnouncement</rdfs:label>
+        <rdfs:comment>The type of an extracted earnings announcement event made by companies</rdfs:comment>
+        </rdfs:Class>
+        
+ 
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance">
+            <rdfs:label>CompanyEarningsGuidance</rdfs:label>
+        <rdfs:comment>The type of an extracted earnings forecast/guidance event made by companies</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber">           
+            <rdfs:label>CompanyEmployeesNumber</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of the number of employees in a company</rdfs:comment>
+        </rdfs:Class>
+        
+  
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyExpansion">
+            <rdfs:label>CompanyExpansion</rdfs:label>
+        <rdfs:comment>The type of an extracted event of company expansion</rdfs:comment>
+        </rdfs:Class>
+        
+ 
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyFounded">
+            <rdfs:label>CompanyFounded</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of the founding year of a company</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyInvestment">
+            <rdfs:label>CompanyInvestment</rdfs:label>
+        <rdfs:comment>The type of an extracted company investment/funding mention</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues">
+            <rdfs:label>CompanyLegalIssues</rdfs:label>
+        <rdfs:comment>The type of an extracted legal issue involving a company</rdfs:comment>
+        </rdfs:Class>
+        
+  
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyLocation">
+            <rdfs:label>CompanyLocation</rdfs:label>
+        <rdfs:comment>The type of an extracted information about company&#39;s location</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyMeeting">
+            <rdfs:label>CompanyMeeting</rdfs:label>
+        <rdfs:comment>The type of an extracted announcement of meetings (e.g., AGM, EGM) initiated by companies</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyNameChange">
+            <rdfs:label>CompanyNameChange</rdfs:label>
+        <rdfs:comment>The type of an extracted event of company changing its name</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyProduct">
+            <rdfs:label>CompanyProduct</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a product offered by a company</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyReorganization">
+            <rdfs:label>CompanyReorganization</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of reorganization/restructuring of companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyTechnology">
+            <rdfs:label>CompanyTechnology</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a technology offered by a company</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CompanyTicker">
+            <rdfs:label>CompanyTicker</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of company&#39;s ticker and stock exchange where it&#39;s traded</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/ConferenceCall">
+            <rdfs:label>ConferenceCall</rdfs:label>
+        <rdfs:comment>The type of an extracted announcement of a conference call initiated by companies to review financial results</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Conviction">
+            <rdfs:label>Conviction</rdfs:label>
+        <rdfs:comment>The type of an extracted conviction event</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/CreditRating">
+            <rdfs:label>CreditRating</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of rating the credit of companies or organizations</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/EmploymentChange">
+            <rdfs:label>EmploymentChange</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of change of employment relative to people, companies or organizations</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/EmploymentRelation">
+            <rdfs:label>EmploymentRelation</rdfs:label>
+        <rdfs:comment>The type of an extracted relation between an employer person to an employee person</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue">
+            <rdfs:label>EnvironmentalIssue</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of various environmental issues</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Extinction">
+            <rdfs:label>Extinction</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of species extinction</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/FDAPhase">
+            <rdfs:label>FDAPhase</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a drug&#39;s phase in the US FDA&#39;s approval process</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/FamilyRelation">
+            <rdfs:label>FamilyRelation</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of family relation such as husband-wife, parent-child, etc.</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/GenericRelations">
+            <rdfs:label>GenericRelations</rdfs:label>
+        <rdfs:comment>The type of an extracted relation of the form: Subject - Verb / Predicate - Object</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/IPO">
+            <rdfs:label>IPO</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of company&#39;s initial public offering</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Indictment">
+            <rdfs:label>Indictment</rdfs:label>
+        <rdfs:comment>The type of an extracted indictment event</rdfs:comment>
+        </rdfs:Class>
+        
+        
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/JointVenture">
+            <rdfs:label>JointVenture</rdfs:label>
+        <rdfs:comment>The type of an extracted joint venture event between companies</rdfs:comment>
+        </rdfs:Class>
+        
+        
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/ManMadeDisaster">
+            <rdfs:label>ManMadeDisaster</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a specific man-made disaster</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Merger">
+            <rdfs:label>Merger</rdfs:label>
+        <rdfs:comment>The type of an extracted merger event between companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/MovieRelease">
+            <rdfs:label>MovieRelease</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a movie release</rdfs:comment>
+        </rdfs:Class>
+        
+     
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease">
+            <rdfs:label>MusicAlbumRelease</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a music album release</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/NaturalDisaster">
+            <rdfs:label>NaturalDisaster</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a specific natural disaster</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PatentFiling">
+            <rdfs:label>PatentFiling</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of patent filing by companies or organizations</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PatentIssuance">
+            <rdfs:label>PatentIssuance</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of patent issuance granted to companies or organizations</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonAttributes">
+            <rdfs:label>PersonAttributes</rdfs:label>
+        <rdfs:comment>The type of an extracted personal information, such as age, gender, birthdate and birthplace</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonCareer">
+            <rdfs:label>PersonCareer</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of person&#39;s position and the associated company, organization or place</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonCommunication">
+            <rdfs:label>PersonCommunication</rdfs:label>
+        <rdfs:comment>The type of an extracted communication (meeting, phone call, etc.) between people or groups of people</rdfs:comment>
+        </rdfs:Class>
+        
+ 
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonEducation">
+            <rdfs:label>PersonEducation</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of person&#39;s education and academic degree</rdfs:comment>
+        </rdfs:Class>
+        
+ 
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonEmailAddress">
+            <rdfs:label>PersonEmailAddress</rdfs:label>
+        <rdfs:comment>The tyhpe of an extracted mention of a person&#39;s email address</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonRelation">
+            <rdfs:label>PersonRelation</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of various relationships between people, such as Military, Romantic, etc.</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/PersonTravel">
+            <rdfs:label>PersonTravel</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of a person&#39;s travel from one place to another</rdfs:comment>
+        </rdfs:Class>
+        
+  
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/ProductRecall">
+            <rdfs:label>ProductRecall</rdfs:label>
+        <rdfs:comment>The type of an extracted announcement of company recalling its products</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/ProductRelease">
+            <rdfs:label>ProductRelease</rdfs:label>
+        <rdfs:comment>The type of an extracted announcement of company releasing new products</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Quotation">
+            <rdfs:label>Quotation</rdfs:label>
+        <rdfs:comment>The type of an extracted quotation and its speaker</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/SecondaryIssuance">
+            <rdfs:label>SecondaryIssuance</rdfs:label>
+        <rdfs:comment>The type of an extracted mention of secondary stock issuance</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/StockSplit">
+            <rdfs:label>StockSplit</rdfs:label>
+        <rdfs:comment>The type of an extracted Stock Split relation mention - stock splits announced by companies</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/em/r/Trial">
+            <rdfs:label>Trial</rdfs:label>
+        <rdfs:comment>The type of an extracted trial event</rdfs:comment>
+        </rdfs:Class>
+        
+      
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/er/Company">
+            <rdfs:label>Company-disambiguated</rdfs:label>
+        <rdfs:comment>The type of a disambiguated company name</rdfs:comment>
+        </rdfs:Class>
+        
+    
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/er/Geo/City">
+            <rdfs:label>City-disambiguated</rdfs:label>
+        <rdfs:comment>The type of a disambiguated city name</rdfs:comment>
+        </rdfs:Class>
+        
+       
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/er/Geo/Country">
+            <rdfs:label>Country-disambiguated</rdfs:label>
+        <rdfs:comment>The type of a disambiguated country name</rdfs:comment>
+        </rdfs:Class>
+        
+  
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState">
+            <rdfs:label>ProvinceOrState-disambiguated</rdfs:label>
+        <rdfs:comment>The type of a disambiguated province/state name</rdfs:comment>
+        </rdfs:Class>
+        
+  
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/er/Product/Electronics">
+            <rdfs:label>Electronics-disambiguated</rdfs:label>
+        <rdfs:comment>The type of a disambiguated product name of type Electronics</rdfs:comment>
+        </rdfs:Class>
+        
+     
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/lid/DefaultLangId">
+            <rdfs:label>DefaultLangId</rdfs:label>
+        <rdfs:comment>The type of the identified language for the current document</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/sys/DocInfo">
+            <rdfs:label>DocInfo</rdfs:label>
+        <rdfs:comment>The type of the node that includes the tentire transaction: paramsXML and the submitted content</rdfs:comment>
+        </rdfs:Class>
+        
+   
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/sys/DocInfoMeta">
+            <rdfs:label>DocInfoMeta</rdfs:label>
+        <rdfs:comment>The type of the node that presents meta-info generated by Calais</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/sys/InstanceInfo">
+            <rdfs:label>InstanceInfo</rdfs:label>
+        <rdfs:comment>The type of the node that presents details about individual instances of Calais types</rdfs:comment>
+        </rdfs:Class>
+        
+
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/sys/Message">
+            <rdfs:label>Message</rdfs:label>
+        <rdfs:comment>The type of the node that contains error messages</rdfs:comment>
+        </rdfs:Class>
+        
+  
+        <rdfs:Class rdf:about="http://s.opencalais.com/1/type/sys/RelevanceInfo">
+            <rdfs:label>RelevanceInfo</rdfs:label>
+        <rdfs:comment>The type of the node that presents information about relevance ranking assiged to Calais entities</rdfs:comment>
+        </rdfs:Class>
+        
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- http://s.opencalais.com/1/pred/affiliaterelationtype -->
+
+    <rdf:Property rdf:about="http://s.opencalais.com/1/pred/affiliaterelationtype">
+        <rdfs:label>affiliaterelationtype</rdfs:label>
+        <rdfs:comment>Nature of a relationship between business entities</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyAffiliates"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+    <!-- http://s.opencalais.com/1/pred/age -->
+
+    <rdf:Property rdf:about="http://s.opencalais.com/1/pred/age">
+        <rdfs:label>age</rdfs:label>
+        <rdfs:comment>A person&#39;s age</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+    <!-- http://s.opencalais.com/1/pred/allowDistribution -->
+
+    <rdf:Property rdf:about="http://s.opencalais.com/1/pred/allowDistribution">
+        <rdfs:label>allowDistribution</rdfs:label>
+        <rdfs:comment>Indicates whether tghe extracted metadata can be distributed (user directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+    <!-- http://s.opencalais.com/1/pred/allowSearch -->
+
+    <rdf:Property rdf:about="http://s.opencalais.com/1/pred/allowSearch">
+        <rdfs:label>allowSearch</rdfs:label>
+        <rdfs:comment>Indicates whether future searches can be performed on the extracted metadata (user directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/birthdate">
+        <rdfs:label>birthdate</rdfs:label>
+        <rdfs:comment>A person&#39;s date of birth</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/birthplace">
+        <rdfs:label>birthplace</rdfs:label>
+        <rdfs:comment>A person&#39;s place of birth</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/bonussharesratio">
+        <rdfs:label>bonussharesratio</rdfs:label>
+        <rdfs:comment>Proportion of shares held to shares to be received</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/businessrelationtype">
+        <rdfs:label>businessrelationtype</rdfs:label>
+        <rdfs:comment>Type of business relation between two entities</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/calaisRequestID">
+        <rdfs:label>calaisRequestID</rdfs:label>
+        <rdfs:comment>Unique identifier for the processed request</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/calculateRelevanceScore">
+        <rdfs:label>calculateRelevanceScore</rdfs:label>
+        <rdfs:comment>Indicates whether the extracted metadata will icnlude relevance score for each unique entity (processing directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/caller">
+        <rdfs:label>caller</rdfs:label>
+        <rdfs:comment>Used internally by various Calais apps</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/careertype">
+        <rdfs:label>careertype</rdfs:label>
+        <rdfs:comment>Indicates whether the career is Political or Professional</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/category">
+        <rdfs:label>category</rdfs:label>
+        <rdfs:comment>URI for the identified category/topic of the submitted content based on the Calais document classification module</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/categoryName">
+        <rdfs:label>categoryName</rdfs:label>
+        <rdfs:comment>Human-friendly name for the identified content category/topic</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/certification">
+        <rdfs:label>certification</rdfs:label>
+        <rdfs:comment>Professional credential or certification achieved through a person&#39;s education</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEducation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/changetype">
+        <rdfs:label>changetype</rdfs:label>
+        <rdfs:comment>Type of the employment change, e.g., Enters, Leaves</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/charge">
+        <rdfs:label>charge</rdfs:label>
+        <rdfs:comment>Charge related to arrest, conviction, indictment or trial events</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/city">
+        <rdfs:label>city</rdfs:label>
+        <rdfs:comment>Name of a city, village or settlement</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/classifierName">
+        <rdfs:label>classifierName</rdfs:label>
+        <rdfs:comment>Internal name of the Calais document classification module applied</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company">
+        <rdfs:label>company</rdfs:label>
+        <rdfs:comment>Canonic name of a company entity that is a participant in an event/fact</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Alliance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Bankruptcy"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Buybacks"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCompetitor"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyFounded"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyProduct"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyReorganization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTechnology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTicker"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/IPO"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Merger"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/SecondaryIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/StockSplit"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_acquirer">
+        <rdfs:label>company_acquirer</rdfs:label>
+        <rdfs:comment>Company that acquires another company</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_affiliate">
+        <rdfs:label>company_affiliate</rdfs:label>
+        <rdfs:comment>Company that is a subsidiary or division of another company</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyAffiliates"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_beingacquired">
+        <rdfs:label>company_beingacquired</rdfs:label>
+        <rdfs:comment>Company that is acquired by another company</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_customer">
+        <rdfs:label>company_customer</rdfs:label>
+        <rdfs:comment>Company that purchases products or services from another entity</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCustomer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_distributor">
+        <rdfs:label>company_distributor</rdfs:label>
+        <rdfs:comment>Company that is a distributor of products</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_formername">
+        <rdfs:label>company_formername</rdfs:label>
+        <rdfs:comment>Former company name prior to a name change</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_investor">
+        <rdfs:label>company_investor</rdfs:label>
+        <rdfs:comment>Company making an investment in another company</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_newname">
+        <rdfs:label>company_newname</rdfs:label>
+        <rdfs:comment>New company name resulting from joint venture or a company&#39;s name change</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_parent">
+        <rdfs:label>company_parent</rdfs:label>
+        <rdfs:comment>Company that is a parent of another company</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyAffiliates"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_plaintiff">
+        <rdfs:label>company_plaintiff</rdfs:label>
+        <rdfs:comment>Company that is a plaintiff in a legal issue</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_provider">
+        <rdfs:label>company_provider</rdfs:label>
+        <rdfs:comment>Company that sells products or services to another entity</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCustomer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_rated">
+        <rdfs:label>company_rated</rdfs:label>
+        <rdfs:comment>Company that is being rated by analysts for its credit, equity, financial performance, etc.</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_recalling">
+        <rdfs:label>company_recalling</rdfs:label>
+        <rdfs:comment>Company that is recalling a product</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_source">
+        <rdfs:label>company_source</rdfs:label>
+        <rdfs:comment>Company that is an investment bank/analyst company issuing rating or recommendation</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/company_sued">
+        <rdfs:label>company_sued</rdfs:label>
+        <rdfs:comment>Company that is being sued in a legal issue</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/companylocationtype">
+        <rdfs:label>companylocationtype</rdfs:label>
+        <rdfs:comment>Type of a location where a company is based. For example: headquarters, center of operations, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/companymeetingtype">
+        <rdfs:label>companymeetingtype</rdfs:label>
+        <rdfs:comment>Nature of company meeting, based on topics to be discussed. For example: Annual General Meeting (AGM), Extraordinary General Meeting (EGM), etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/conferencecalltype">
+        <rdfs:label>conferencecalltype</rdfs:label>
+        <rdfs:comment>Nature of conference call, based on topics to be discussed</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/containedbycountry">
+        <rdfs:label>containedbycountry</rdfs:label>
+        <rdfs:comment>Country name that contains a resolved geography (city, province/state, country)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/containedbystate">
+        <rdfs:label>containedbystate</rdfs:label>
+        <rdfs:comment>Province/State name that contains a resolved geograpy (city)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/contentType">
+        <rdfs:label>contentType</rdfs:label>
+        <rdfs:comment>Format of the input content as submitted by the user (processing direcgtive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/country">
+        <rdfs:label>country</rdfs:label>
+        <rdfs:comment>Name of country referred to in text</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/date">
+        <rdfs:label>date</rdfs:label>
+        <rdfs:comment>Normalized date mentioned in text, either explicitly or relative to a DateString</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Alliance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Bankruptcy"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Buybacks"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyReorganization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Extinction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/IPO"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Merger"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MovieRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/NaturalDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/SecondaryIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/datestring">
+        <rdfs:label>datestring</rdfs:label>
+        <rdfs:comment>Normalized date mentioned in text, either explicitly or relative to a DateString</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Alliance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Bankruptcy"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Buybacks"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyReorganization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Extinction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/IPO"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Merger"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MovieRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/NaturalDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/SecondaryIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/degree">
+        <rdfs:label>degree</rdfs:label>
+        <rdfs:comment>Academic degree obtained through a person&#39;s education</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEducation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/detection">
+        <rdfs:label>detection</rdfs:label>
+        <rdfs:comment>Text portions before and after a matched instance</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/discardMetadata">
+        <rdfs:label>discardMetadata</rdfs:label>
+        <rdfs:comment>Indicates whether the output will exclude Entity Disambiguation results (processing directives in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/docDate">
+        <rdfs:label>docDate</rdfs:label>
+        <rdfs:comment>Identified date of the submitted content (if mentioned)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/docId">
+        <rdfs:label>docId</rdfs:label>
+        <rdfs:comment>URI of the processed content for future retrievals </rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/lid/DefaultLangId"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/RelevanceInfo"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/docTitle">
+        <rdfs:label>docTitle</rdfs:label>
+        <rdfs:comment>Document title as identified by Calais (could also be empty)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/document">
+        <rdfs:label>document</rdfs:label>
+        <rdfs:comment>Original content submitted converted into a Calais XML</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/emVer">
+        <rdfs:label>emVer</rdfs:label>
+        <rdfs:comment>Internal version name/number of the Calais extraction module</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/emailaddress">
+        <rdfs:label>emailaddress</rdfs:label>
+        <rdfs:comment>Email address mentioned in the text</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEmailAddress"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/employeesnumber">
+        <rdfs:label>employeesnumber</rdfs:label>
+        <rdfs:comment>The number of employees employed by a company</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/enableMetadataType">
+        <rdfs:label>enableMetadataType</rdfs:label>
+        <rdfs:comment>Indicates whether the output (RDF only) will include Generic Relation extractions (processing directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/environmentalissue">
+        <rdfs:label>environmentalissue</rdfs:label>
+        <rdfs:comment>Envireonmental issue mentioned in the text</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/exact">
+        <rdfs:label>exact</rdfs:label>
+        <rdfs:comment>Text portion of a matched instance</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/expansiontype">
+        <rdfs:label>expansiontype</rdfs:label>
+        <rdfs:comment>Type of an expansion event, either New Mrket or New Unit</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/externalID">
+        <rdfs:label>externalID</rdfs:label>
+        <rdfs:comment>Indicates whether the extracted metadata can be distributed (user directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/externalMetadata">
+        <rdfs:label>externalMetadata</rdfs:label>
+        <rdfs:comment>External Metadate section as submitted by the user</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/facility">
+        <rdfs:label>facility</rdfs:label>
+        <rdfs:comment>Name of a facility</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/familyrelationtype">
+        <rdfs:label>familyrelationtype</rdfs:label>
+        <rdfs:comment>Family relationship of two individuals</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FamilyRelation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/fdastage">
+        <rdfs:label>fdastage</rdfs:label>
+        <rdfs:comment>Stage in the FDA approval process</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/financialmetric">
+        <rdfs:label>financialmetric</rdfs:label>
+        <rdfs:comment>Normalized metric of financial results. For example: Revenues, Net Loss, Earnings Per Share (Diluted), etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/financialtrend">
+        <rdfs:label>financialtrend</rdfs:label>
+        <rdfs:comment>Current rating or recommendation with respect to previous rating/recommendation</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/gender">
+        <rdfs:label>gender</rdfs:label>
+        <rdfs:comment>A person&#39;s gender</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/id">
+        <rdfs:label>id</rdfs:label>
+        <rdfs:comment>Shortened version of the docId</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/lang">
+        <rdfs:label>lang</rdfs:label>
+        <rdfs:comment>URI of the identified language for the submitted content</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/lid/DefaultLangId"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/langIdVer">
+        <rdfs:label>langIdVer</rdfs:label>
+        <rdfs:comment>Internal version name/number of the Calais language identification module</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/language">
+        <rdfs:label>language</rdfs:label>
+        <rdfs:comment>Human-friendly name for the Identified language of the submitted content</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/latitude">
+        <rdfs:label>latitude</rdfs:label>
+        <rdfs:comment>Latitude of a disambiguated geography</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/lawsuitclass">
+        <rdfs:label>lawsuitclass</rdfs:label>
+        <rdfs:comment>Type of a legal issue. Possible values are: Class action or lawsuit</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/length">
+        <rdfs:label>length</rdfs:label>
+        <rdfs:comment>Length of the matched text (in characters) for each identified instance</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/location">
+        <rdfs:label>location</rdfs:label>
+        <rdfs:comment>Location name where certain events occurred</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Extinction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/NaturalDisaster"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/locationdestination">
+        <rdfs:label>locationdestination</rdfs:label>
+        <rdfs:comment>Location name that is a destination of a person&#39;s travel</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/locationorigin">
+        <rdfs:label>locationorigin</rdfs:label>
+        <rdfs:comment>Location name that is an origin of a person&#39;s travel</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/longitude">
+        <rdfs:label>longitude</rdfs:label>
+        <rdfs:comment>Longitude of a disambiguated geography</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/manmadedisaster">
+        <rdfs:label>manmadedisaster</rdfs:label>
+        <rdfs:comment>Phrase describing a man-made disaster</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/message">
+        <rdfs:label>message</rdfs:label>
+        <rdfs:comment>Container for messagecode and text - contains info about the returned error message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/sys/Message"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/messageCode">
+        <rdfs:label>messageCode</rdfs:label>
+        <rdfs:comment>Internal code for an error message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/movie">
+        <rdfs:label>movie</rdfs:label>
+        <rdfs:comment>Name of a movie/film</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MovieRelease"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/musicalbum">
+        <rdfs:label>musicalbum</rdfs:label>
+        <rdfs:comment>Name of a music album</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/musicgroup_performer">
+        <rdfs:label>musicgroup_performer</rdfs:label>
+        <rdfs:comment>Name of a music group performing or releasing a music album</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/name">
+        <rdfs:label>name</rdfs:label>
+        <rdfs:comment>Name of an extracted or disambiguated element</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/URL"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/nationality">
+        <rdfs:label>nationality</rdfs:label>
+        <rdfs:comment>Nationality of an identified entity such as Person, Company, Organization if mentioned in the document</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/naturaldisaster">
+        <rdfs:label>naturaldisaster</rdfs:label>
+        <rdfs:comment>Phrase describing a natural disaster</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/NaturalDisaster"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/offset">
+        <rdfs:label>offset</rdfs:label>
+        <rdfs:comment>Offset of the matched text (in characters, from the beginning of the document) for each identified instance</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/organization">
+        <rdfs:label>organization</rdfs:label>
+        <rdfs:comment>Canonic name of an organization entity that is a participant in an event/fact</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/organization_customer">
+        <rdfs:label>organization_customer</rdfs:label>
+        <rdfs:comment>Organization that purchases products or services from another entity</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCustomer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/organization_rated">
+        <rdfs:label>organization_rated</rdfs:label>
+        <rdfs:comment>Organization that is being rated  by analysts for its credit status</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/organizationorcompany">
+        <rdfs:label>organizationorcompany</rdfs:label>
+        <rdfs:comment>Name of a company or an organization</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/organizationtype">
+        <rdfs:label>organizationtype</rdfs:label>
+        <rdfs:comment>Organization classification. Possible values: sports, governmental military, governmental civilian, political party. N/A.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/othercharges">
+        <rdfs:label>othercharges</rdfs:label>
+        <rdfs:comment>List of additional charges related to arrest, conviction, indictment or trial events</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/outputFormat">
+        <rdfs:label>outputFormat</rdfs:label>
+        <rdfs:comment>Format of the returned results (processing directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/patentdescription">
+        <rdfs:label>patentdescription</rdfs:label>
+        <rdfs:comment>Phrase describing a patent</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/patentnumber">
+        <rdfs:label>patentnumber</rdfs:label>
+        <rdfs:comment>Number of an issued/registered patent</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person">
+        <rdfs:label>person</rdfs:label>
+        <rdfs:comment>Canonic name of a person entity that is a participant in an event/fact</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FamilyRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEducation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEmailAddress"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Quotation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person_employee">
+        <rdfs:label>person_employee</rdfs:label>
+        <rdfs:comment>Name of a person that is an employee</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person_employer">
+        <rdfs:label>person_employer</rdfs:label>
+        <rdfs:comment>Name of a person that is an employer</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person_performer">
+        <rdfs:label>person_performer</rdfs:label>
+        <rdfs:comment>Name of a person (artist) performing or releasing a music album</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person_plaintiff">
+        <rdfs:label>person_plaintiff</rdfs:label>
+        <rdfs:comment>Peron that is a plaintiff in a legal issue</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person_relative">
+        <rdfs:label>person_relative</rdfs:label>
+        <rdfs:comment>Name of a family relative</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FamilyRelation"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/person_source">
+        <rdfs:label>person_source</rdfs:label>
+        <rdfs:comment>Name of the analyst issuing an estimate or recommendation</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/persondescription">
+        <rdfs:label>persondescription</rdfs:label>
+        <rdfs:comment>Description of person involved in an event/fact</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/personrelationtype">
+        <rdfs:label>personrelationtype</rdfs:label>
+        <rdfs:comment>Type of relationship between two people. For example: business, Academic Military, Romantic, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonRelation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/persontype">
+        <rdfs:label>persontype</rdfs:label>
+        <rdfs:comment>Person classification. Possible values: sports, entertainment, political, economic, military. N/A</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/position">
+        <rdfs:label>position</rdfs:label>
+        <rdfs:comment>Title of position that person holds, will hold, or held. </rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/prefix">
+        <rdfs:label>prefix</rdfs:label>
+        <rdfs:comment>Text portion before a matched instance</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/price_new">
+        <rdfs:label>price_new</rdfs:label>
+        <rdfs:comment>Target price quoted.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/price_old">
+        <rdfs:label>price_old</rdfs:label>
+        <rdfs:comment>Previous target price.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/processingVer">
+        <rdfs:label>processingVer</rdfs:label>
+        <rdfs:comment>Internal version of the tagging process</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/product">
+        <rdfs:label>product</rdfs:label>
+        <rdfs:comment>Canonic name of a product entity that is a particpant in an event/fact</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyProduct"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/producttype">
+        <rdfs:label>producttype</rdfs:label>
+        <rdfs:comment>Product classification. Possible values: drug, car, aircraft electronics. N/A</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyProduct"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/provinceorstate">
+        <rdfs:label>provinceorstate</rdfs:label>
+        <rdfs:comment>State, county or province that is a sub-part of a country</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/quarter">
+        <rdfs:label>quarter</rdfs:label>
+        <rdfs:comment>Quarter number referred to in text</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/quote">
+        <rdfs:label>quote</rdfs:label>
+        <rdfs:comment>Direct or indirect excerpt of communication</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Quotation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/rank_new">
+        <rdfs:label>rank_new</rdfs:label>
+        <rdfs:comment>New or current rank of a company&#39;s equity or debt</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/rank_old">
+        <rdfs:label>rank_old</rdfs:label>
+        <rdfs:comment>Previous rank of a company&#39;s equity or debt</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/relationobject">
+        <rdfs:label>relationobject</rdfs:label>
+        <rdfs:comment>The subject of a GenericRelations (subject-predicate-object) extraction</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/GenericRelations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/relationsubject">
+        <rdfs:label>relationsubject</rdfs:label>
+        <rdfs:comment>The object of a GenericRelations (subject-predicate-object) extraction</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/GenericRelations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/relevance">
+        <rdfs:label>relevance</rdfs:label>
+        <rdfs:comment>Relevance score in the rage 0-1 of each extracted entity; indicates the importance of an entity relative to the current document</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/RelevanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/reltagBaseURL">
+        <rdfs:label>reltagBaseURL</rdfs:label>
+        <rdfs:comment>Base URL to be put in rel-tag microformats (processing directives in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/schoolororganization">
+        <rdfs:label>schoolororganization</rdfs:label>
+        <rdfs:comment>Academic institution</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEducation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/score">
+        <rdfs:label>score</rdfs:label>
+        <rdfs:comment>Confidence score (range: 0 lowest - 1 highest) of the assigned type/topic</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/cat/DocCat"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/shortname">
+        <rdfs:label>shortname</rdfs:label>
+        <rdfs:comment>Core name of a resolved geography</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/signature">
+        <rdfs:label>signature</rdfs:label>
+        <rdfs:comment>Security signature of the RDF content returned by Calais</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/species">
+        <rdfs:label>species</rdfs:label>
+        <rdfs:comment>Species part of extinction events</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Extinction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/status">
+        <rdfs:label>status</rdfs:label>
+        <rdfs:comment>Status of various events and facts based on the context of the text. For example: announced, planned, cancelled, postponed, rumored, known, closed, new, etc.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Alliance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Bankruptcy"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyReorganization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/IPO"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Merger"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MovieRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/SecondaryIssuance"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/stockexchange">
+        <rdfs:label>stockexchange</rdfs:label>
+        <rdfs:comment>Normalized name of the stock exchange</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTicker"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/stocksplitratio">
+        <rdfs:label>stocksplitratio</rdfs:label>
+        <rdfs:comment>Proportion of shares held before the split to shares after the split</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/StockSplit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/subject">
+        <rdfs:label>subject</rdfs:label>
+        <rdfs:comment>Extracted entity that is pointed to by a disambiguated entity</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/URL"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Alliance"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Bankruptcy"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Buybacks"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyAffiliates"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCompetitor"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCustomer"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyFounded"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyProduct"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyReorganization"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTechnology"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTicker"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Extinction"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/FamilyRelation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/GenericRelations"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/IPO"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Merger"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/MovieRelease"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/NaturalDisaster"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEducation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEmailAddress"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonRelation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Quotation"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/SecondaryIssuance"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/StockSplit"/>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/RelevanceInfo"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/submissionDate">
+        <rdfs:label>submissionDate</rdfs:label>
+        <rdfs:comment>Time stamp for the processed request</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/submitter">
+        <rdfs:label>submitter</rdfs:label>
+        <rdfs:comment>Identifier for the content submitter (user directive in paramsXML)</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/submitterCode">
+        <rdfs:label>submitterCode</rdfs:label>
+        <rdfs:comment>Encrypted license key of the submitter</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/sueddescription">
+        <rdfs:label>sueddescription</rdfs:label>
+        <rdfs:comment>Description of an entity that is being sued</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/suffix">
+        <rdfs:label>suffix</rdfs:label>
+        <rdfs:comment>Text portions after a matched instance</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/technology">
+        <rdfs:label>technology</rdfs:label>
+        <rdfs:comment>Name or description of a type of technology</rdfs:comment>
+        <rdfs:range rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTechnology"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/text">
+        <rdfs:label>text</rdfs:label>
+        <rdfs:comment>Human-friendly text that describes an error message</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/Message"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/ticker">
+        <rdfs:label>ticker</rdfs:label>
+        <rdfs:comment>Stock symbol</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTicker"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/unit">
+        <rdfs:label>unit</rdfs:label>
+        <rdfs:comment>Company&#39;s unit such as department name of region name</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/verb">
+        <rdfs:label>verb</rdfs:label>
+        <rdfs:comment>The main predicate/verb of a GenericRelations (subject-predicate-object) extraction</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/GenericRelations"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://s.opencalais.com/1/pred/year">
+        <rdfs:label>year</rdfs:label>
+        <rdfs:comment>Year related to an event/fact</rdfs:comment>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyFounded"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+    
+
+        <rdf:Property rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/URL"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Acquisition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Alliance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystEarningsEstimate"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/AnalystRecommendation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Arrest"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Bankruptcy"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BonusSharesIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/BusinessRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Buybacks"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyAffiliates"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCompetitor"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyCustomer"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsAnnouncement"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEarningsGuidance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyEmployeesNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyExpansion"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyFounded"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyInvestment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLegalIssues"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyLocation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyMeeting"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyNameChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyProduct"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyReorganization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTechnology"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CompanyTicker"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ConferenceCall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Conviction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/CreditRating"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentChange"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EmploymentRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/EnvironmentalIssue"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Extinction"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FDAPhase"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/FamilyRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/GenericRelations"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/IPO"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Indictment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/JointVenture"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ManMadeDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Merger"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MovieRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/MusicAlbumRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/NaturalDisaster"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentFiling"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PatentIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonAttributes"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCareer"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonCommunication"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEducation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonEmailAddress"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonRelation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/PersonTravel"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRecall"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/ProductRelease"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Quotation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/SecondaryIssuance"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/StockSplit"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/r/Trial"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/lid/DefaultLangId"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfo"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/DocInfoMeta"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/InstanceInfo"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/Message"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/sys/RelevanceInfo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/profile">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+  
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/address">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/competitor">
+     <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </rdf:Property>
+
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/homepage">
+    <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/cik">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+  
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/sic">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+  
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/personposition">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+    
+  <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/img">     
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/containedBy">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+      
+    <rdf:Property rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </rdf:Property>  
+  
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/redirection">
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/disambiguation">
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+        <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://xmlns.com/foaf/0.1/page">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/URL"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://www.w3.org/2002/07/owl#sameAs">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/URL"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+    
+    <rdf:Property rdf:about="http://s.opencalais.com/1/linkeddata/pred/alias">
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+       <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+       <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Property>
+  
+  <rdf:Property rdf:about="http://s.opencalais.com/1/pred/repositoryVer">
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Anniversary"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/City"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Company"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Continent"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Country"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Currency"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EmailAddress"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/EntertainmentAwardEvent"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Facility"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/FaxNumber"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Holiday"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/IndustryTerm"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MarketIndex"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalCondition"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MedicalTreatment"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Movie"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicAlbum"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/MusicGroup"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/NaturalFeature"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/OperatingSystem"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Organization"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Person"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PhoneNumber"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Position"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Product"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProgrammingLanguage"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/ProvinceOrState"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/PublishedMedium"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioProgram"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/RadioStation"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Region"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsEvent"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsGame"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/SportsLeague"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVShow"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/TVStation"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/Technology"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/em/e/URL"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Company"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/City"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/Country"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Geo/ProvinceOrState"/>
+         <rdfs:domain rdf:resource="http://s.opencalais.com/1/type/er/Product/Electronics"/>
+         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </rdf:Property>
+  
+</rdf:RDF>

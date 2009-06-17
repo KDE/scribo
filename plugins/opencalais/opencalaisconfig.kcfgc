@@ -1,0 +1,4 @@
+File=opencalaisconfig.kcfg
+NameSpace=OpenCalais
+ClassName=Config
+Singleton=true

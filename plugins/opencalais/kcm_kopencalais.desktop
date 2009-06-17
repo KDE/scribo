@@ -1,0 +1,15 @@
+[Desktop Entry]
+Exec=kcmshell4 kcm_kopencalais
+Icon=nepomuk
+Type=Service
+Name=Open Calais
+Comment=Configure the Open Calais Scribo plugin
+
+X-KDE-ServiceTypes=KCModule
+X-KDE-Library=kcm_kopencalais
+X-KDE-ParentComponents=scribo_opencalaistextmatchplugin
+X-KDE-PluginInfo-Name=kcm_kopencalais
+X-KDE-PluginInfo-Author=Sebastian Trueg
+X-KDE-PluginInfo-Email=trueg@kde.org
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-License=GPL
