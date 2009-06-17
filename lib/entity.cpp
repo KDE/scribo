@@ -33,6 +33,7 @@ Scribo::TextMatchPrivate* Scribo::EntityPrivate::clone() const
     ep->m_occurrences = m_occurrences;
     ep->m_name = m_name;
     ep->m_type = m_type;
+    ep->m_localResource = m_localResource;
     return ep;
 }
 

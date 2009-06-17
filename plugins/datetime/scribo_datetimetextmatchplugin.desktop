@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Datetime text match plugin
+Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
+X-KDE-ServiceTypes=Scribo/TextMatchPlugin
+Type=Service
+X-KDE-Library=scribo_datetimetextmatchplugin
+
+X-KDE-PluginInfo-Name=scribo_datetimetextmatchplugin
+X-KDE-PluginInfo-Author=Sebastian Trueg
+X-KDE-PluginInfo-Email=trueg@kde.org
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true

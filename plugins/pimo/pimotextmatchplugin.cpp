@@ -86,11 +86,11 @@ void PimoTextMatchPlugin::scanText()
 void PimoTextMatchPlugin::queryWord( const QString& word )
 {
     if ( word.length() < s_minLength ) {
-        kDebug() << word << "too short";
+//        kDebug() << word << "too short";
         return;
     }
 
-    kDebug() << "checking word" << word;
+//    kDebug() << "checking word" << word;
 
     QString query
         = Soprano::Index::IndexFilterModel::encodeUriForLuceneQuery( Soprano::Vocabulary::NAO::prefLabel() )

@@ -19,8 +19,6 @@ target_link_libraries(scribo_pimotextmatchplugin
   ${SOPRANO_LIBRARIES}
   ${SOPRANO_INDEX_LIBRARIES}
   ${KDE4_KDECORE_LIBS}
-  ${KDE4_KDEUI_LIBS}
-  ${QT_QTNETWORK_LIBRARY}
   scribo
   pimo
 )

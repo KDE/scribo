@@ -24,6 +24,9 @@
 #include "textmatch_p.h"
 #include "entity.h"
 
+#include <Nepomuk/Variant>
+#include <Nepomuk/Types/Property>
+
 namespace Scribo {
     class StatementPrivate : public TextMatchPrivate
     {
@@ -35,6 +38,8 @@ namespace Scribo {
         QString m_verb;
         QString m_label;
         Entity m_entity;
+        Nepomuk::Types::Property m_property;
+        Nepomuk::Variant m_value;
     };
 }
 

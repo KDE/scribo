@@ -29,13 +29,18 @@ Scribo::TextMatchPrivate* Scribo::StatementPrivate::clone() const
     s->m_occurrences = m_occurrences;
     s->m_verb = m_verb;
     s->m_entity = m_entity;
+    s->m_property = m_property;
+    s->m_value = m_value;
     return s;
 }
 
 
 QString Scribo::StatementPrivate::label() const
 {
-    return m_label;
+    if ( !m_label.isEmpty() )
+        return m_label;
+    else
+        return m_value.toString();
 }
 
 
@@ -53,6 +58,16 @@ Scribo::Statement::Statement( const QString& verb, const Entity& entity, const Q
     p->m_verb = verb;
     p->m_entity = entity;
     p->m_label = label;
+}
+
+
+Scribo::Statement::Statement( const Nepomuk::Types::Property& property, const Nepomuk::Variant& value, const Soprano::Graph& rdf )
+    : TextMatch( new StatementPrivate() )
+{
+    StatementPrivate* p = static_cast<StatementPrivate*>( d );
+    p->m_rdf = rdf;
+    p->m_property = property;
+    p->m_value = value;
 }
 
 
@@ -78,4 +93,16 @@ QString Scribo::Statement::verb() const
 Scribo::Entity Scribo::Statement::entity() const
 {
     return static_cast<StatementPrivate*>( d )->m_entity;
+}
+
+
+Nepomuk::Types::Property Scribo::Statement::property() const
+{
+    return static_cast<StatementPrivate*>( d )->m_property;
+}
+
+
+Nepomuk::Variant Scribo::Statement::value() const
+{
+    return static_cast<StatementPrivate*>( d )->m_value;
 }

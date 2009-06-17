@@ -24,6 +24,10 @@
 #include "textmatchplugin.h"
 
 #include <QtCore/QVariant>
+#include <QtCore/QHash>
+
+#include <Soprano/Node> // for qHash(QUrl)
+
 
 namespace OpenCalais {
     class LookupJob;
@@ -45,7 +49,10 @@ private Q_SLOTS:
     void slotResult( KJob* );
 
 private:
+    QUrl matchPimoType( const QUrl& openCalaisType );
+
     OpenCalais::LookupJob* m_lookupJob;
+    QHash<QUrl, QUrl> m_typeMap;
 };
 
 #endif

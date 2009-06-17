@@ -25,6 +25,13 @@
 
 #include "scribo_export.h"
 
+namespace Nepomuk {
+    class Variant;
+    namespace Types {
+        class Property;
+    }
+}
+
 namespace Scribo {
 
     class StatementPrivate;
@@ -34,12 +41,20 @@ namespace Scribo {
     public:
         Statement();
         Statement( const QString& verb, const Entity& entity, const QString& label, const Soprano::Graph& rdf );
+        Statement( const Nepomuk::Types::Property& property, const Nepomuk::Variant& value, const Soprano::Graph& rdf );
         ~Statement();
 
         Statement& operator=( const Statement& );
 
+        // either this...
         QString verb() const;
         Entity entity() const;
+
+        // ... or this
+        Nepomuk::Types::Property property() const;
+        Nepomuk::Variant value() const;
+
+        // -> this is no good. Split in two classes or cleanup somehow
     };
 }
 

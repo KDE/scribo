@@ -22,6 +22,9 @@
 #include "lookupjob.h"
 #include "entity.h"
 #include "statement.h"
+#include "pimo.h"
+#include "opencalais.h"
+#include "nfo.h"
 
 #include <Nepomuk/Types/Class>
 
@@ -40,6 +43,16 @@ OpenCalaisTextMatchPlugin::OpenCalaisTextMatchPlugin( QObject* parent, const QVa
     : TextMatchPlugin( parent ),
       m_lookupJob( 0 )
 {
+    // build OpenCalais->PIMO type map
+    // FIXME: complete the map
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::City(), Nepomuk::Vocabulary::PIMO::City() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::Country(), Nepomuk::Vocabulary::PIMO::Country() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::Company(), Nepomuk::Vocabulary::PIMO::Organization() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::Organization(), Nepomuk::Vocabulary::PIMO::Organization() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::Person(), Nepomuk::Vocabulary::PIMO::Person() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::Position(), Nepomuk::Vocabulary::PIMO::PersonRole() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::Continent(), Nepomuk::Vocabulary::PIMO::Location() );
+    m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::URL(), Nepomuk::Vocabulary::NFO::Website() );
 }
 
 
@@ -103,7 +116,7 @@ void OpenCalaisTextMatchPlugin::slotResult( KJob* job )
                                        .arg( r.toN3() ),
                                        Soprano::Query::QueryLanguageSparql );
             if ( it2.next() ) {
-                Nepomuk::Types::Class type( it2["type"].uri() );
+                Nepomuk::Types::Class type( matchPimoType( it2["type"].uri() ) );
                 QString name = it2["name"].toString();
 
                 Scribo::Entity entity( name, type, graph );
@@ -162,6 +175,15 @@ void OpenCalaisTextMatchPlugin::slotResult( KJob* job )
     emitFinished();
 }
 
+
+QUrl OpenCalaisTextMatchPlugin::matchPimoType( const QUrl& openCalaisType )
+{
+    QHash<QUrl, QUrl>::const_iterator it = m_typeMap.constFind( openCalaisType );
+    if ( it == m_typeMap.constEnd() )
+        return Nepomuk::Vocabulary::PIMO::Thing();
+    else
+        return *it;
+}
 
 SCRIBO_EXPORT_TEXTMATCH_PLUGIN( OpenCalaisTextMatchPlugin, "scribo_opencalaistextmatchplugin" )
 
