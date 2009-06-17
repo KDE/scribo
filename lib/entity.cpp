@@ -55,7 +55,10 @@ Scribo::Entity::Entity( const Entity& other )
 }
 
 
-Scribo::Entity::Entity( const QString& label, const Nepomuk::Types::Class& type, const Soprano::Graph& rdf )
+Scribo::Entity::Entity( const QString& label,
+                        const Nepomuk::Types::Class& type,
+                        const Soprano::Graph& rdf,
+                        const Nepomuk::Resource& res )
     : TextMatch( new EntityPrivate() )
 {
     EntityPrivate* p = static_cast<EntityPrivate*>( d );
@@ -63,6 +66,7 @@ Scribo::Entity::Entity( const QString& label, const Nepomuk::Types::Class& type,
     p->m_name = label;
     p->m_rdf = rdf;
     p->m_type = type;
+    p->m_localResource = res;
 }
 
 
@@ -82,4 +86,10 @@ Scribo::Entity& Scribo::Entity::operator=( const Entity& other )
 Nepomuk::Types::Class Scribo::Entity::type() const
 {
     return static_cast<EntityPrivate*>( d )->m_type;
+}
+
+
+Nepomuk::Resource Scribo::Entity::localResource() const
+{
+    return static_cast<EntityPrivate*>( d )->m_localResource;
 }

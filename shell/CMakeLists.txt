@@ -26,6 +26,6 @@ target_link_libraries(scriboshell
   ${KDE4_KUTILS_LIBS}
 )
 
-#install(TARGETS scriboshell DESTINATION ${BIN_INSTALL_DIR})
+install(TARGETS scriboshell DESTINATION ${BIN_INSTALL_DIR})
 #install(FILES scriboshell.desktop DESTINATION ${SERVICES_INSTALL_DIR}/ServiceMenus)
 #install(FILES scriboshell-app.desktop DESTINATION ${XDG_APPS_INSTALL_DIR})

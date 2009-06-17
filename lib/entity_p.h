@@ -24,6 +24,7 @@
 #include "textmatch_p.h"
 
 #include <Nepomuk/Types/Class>
+#include <Nepomuk/Resource>
 
 
 namespace Scribo {
@@ -34,6 +35,7 @@ namespace Scribo {
 
         QString m_name;
         mutable Nepomuk::Types::Class m_type;
+        Nepomuk::Resource m_localResource;
 
         bool isEntity() const { return true; }
 

@@ -18,45 +18,35 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef _SCRIBO_TEXT_ENTITY_H_
-#define _SCRIBO_TEXT_ENTITY_H_
+#ifndef _PIMO_TEXT_MATCH_PLUGIN_H_
+#define _PIMO_TEXT_MATCH_PLUGIN_H_
 
-#include "textmatch.h"
+#include "textmatchplugin.h"
 
-#include "scribo_export.h"
+#include <QtCore/QVariant>
 
-#include <Nepomuk/Resource>
+/**
+ * TextMatchPlugin that simply looks through the text, looking for each word
+ * longer than N chars in the nao:prefLabel of each thing in the Nepomuk db.
+ */
+class PimoTextMatchPlugin : public Scribo::TextMatchPlugin
+{
+    Q_OBJECT
 
-namespace Nepomuk {
-    namespace Types {
-        class Class;
-    }
-}
+public:
+    PimoTextMatchPlugin( QObject* parent, const QVariantList& );
+    ~PimoTextMatchPlugin();
 
-namespace Scribo {
+protected:
+    void doGetPossibleMatches( const QString& text );
 
-    class EntityPrivate;
+private Q_SLOTS:
+    void scanText();
+    void queryWord( const QString& word );
 
-    class SCRIBO_EXPORT Entity : public TextMatch
-    {
-    public:
-        Entity();
-        Entity( const Entity& );
-        Entity( const QString& label,
-                const Nepomuk::Types::Class& type,
-                const Soprano::Graph& rdf,
-                const Nepomuk::Resource& res = Nepomuk::Resource() );
-        ~Entity();
-
-        Entity& operator=( const Entity& );
-
-        Nepomuk::Types::Class type() const;
-
-        /**
-         * An optional reference to a local resource.
-         */
-        Nepomuk::Resource localResource() const;
-    };
-}
+private:
+    QString m_text;
+    int m_pos;
+};
 
 #endif
