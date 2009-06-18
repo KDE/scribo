@@ -37,7 +37,7 @@ namespace {
         Scribo::TextMatchPrivate* clone() const { return const_cast<TextMatchSharedNull*>( this ); }
     };
 
-    Q_GLOBAL_STATIC( TextMatchSharedNull, sharedNull );
+    Q_GLOBAL_STATIC( TextMatchSharedNull, sharedNull )
 }
 
 Scribo::TextMatchPrivate::TextMatchPrivate()
