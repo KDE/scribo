@@ -38,8 +38,6 @@
 #include <KDebug>
 #include <KPluginFactory>
 
-#include <QtCore/QCoreApplication>
-
 
 OpenCalaisTextMatchPlugin::OpenCalaisTextMatchPlugin( QObject* parent, const QVariantList& )
     : TextMatchPlugin( parent ),
@@ -170,9 +168,6 @@ void OpenCalaisTextMatchPlugin::slotResult( KJob* job )
                     addNewMatch( s );
                 }
             }
-
-            // a little bit of fake async
-            QCoreApplication::processEvents();
         }
     }
     else {
