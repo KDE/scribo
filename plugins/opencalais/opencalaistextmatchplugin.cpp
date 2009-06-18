@@ -38,6 +38,8 @@
 #include <KDebug>
 #include <KPluginFactory>
 
+#include <QtCore/QCoreApplication>
+
 
 OpenCalaisTextMatchPlugin::OpenCalaisTextMatchPlugin( QObject* parent, const QVariantList& )
     : TextMatchPlugin( parent ),
@@ -119,6 +121,8 @@ void OpenCalaisTextMatchPlugin::slotResult( KJob* job )
                 Nepomuk::Types::Class type( matchPimoType( it2["type"].uri() ) );
                 QString name = it2["name"].toString();
 
+                // FIXME: actually the opencalais resource should be used as the pimo:hasOtherRepresentation of the pimo thing
+                //        but that would mean that Entity needs more information or the graph needs to be really used
                 Scribo::Entity entity( name, type, graph );
                 do {
                     double rel = it2["rel"].literal().toDouble();
@@ -166,6 +170,9 @@ void OpenCalaisTextMatchPlugin::slotResult( KJob* job )
                     addNewMatch( s );
                 }
             }
+
+            // a little bit of fake async
+            QCoreApplication::processEvents();
         }
     }
     else {

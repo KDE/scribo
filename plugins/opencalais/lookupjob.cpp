@@ -59,6 +59,8 @@ public:
 
 bool OpenCalais::LookupJob::Private::createModel()
 {
+    delete resultModel;
+
     // sesame2 is waaaay faster then redland which is the default in Soprano
      if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
          resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
@@ -158,7 +160,7 @@ void OpenCalais::LookupJob::slotTransferResult()
 {
     // FIXME: error handling
     QByteArray data = d->lastReply->readAll();
-    kDebug() << d->lastReply->error() << d->lastReply->rawHeaderList() << data;
+//    kDebug() << d->lastReply->error() << d->lastReply->rawHeaderList() << data;
     delete d->lastReply;
 
     if ( !d->createModel() ) {
@@ -167,28 +169,14 @@ void OpenCalais::LookupJob::slotTransferResult()
         return;
     }
 
-//    QHash<QUrl, QHash<QUrl, Soprano::Node> > resources;
-
     const Soprano::Parser* parser = Soprano::PluginManager::instance()->discoverParserForSerialization( Soprano::SerializationRdfXml );
     if ( parser ) {
         Soprano::StatementIterator it = parser->parseString( QString::fromUtf8( data ), QUrl(), Soprano::SerializationRdfXml );
         while ( it.next() ) {
             Soprano::Statement s = *it;
-//            resources[s.subject().uri()].insert( s.predicate().uri(), s.object() );
             d->resultModel->addStatement( s );
         }
     }
-
-//     for ( QHash<QUrl, QHash<QUrl, Soprano::Node> >::const_iterator it = resources.constBegin();
-//           it != resources.constEnd(); ++it ) {
-//         QString rs = it.key().toString() + ":\n";
-//         for ( QHash<QUrl, Soprano::Node>::const_iterator it2 = it.value().constBegin();
-//               it2 != it.value().constEnd(); ++it2 ) {
-//             rs += QString( "  * %1 - %2\n" ).arg( it2.key().toString(), it2.value().toString() );
-//         }
-//         rs += "\n";
-//         kDebug() << rs;
-//     }
 
     emitResult();
 }
