@@ -40,7 +40,7 @@ public:
     QList<TextMatchPlugin*> m_plugins;
 
     QEventLoop* m_loop;
-    QList<TextMatch>* m_matchesCache;
+    QList<TextMatch> m_matchesCache;
 
     TextMatcher* q;
 };
@@ -48,8 +48,7 @@ public:
 
 void Scribo::TextMatcher::Private::_k_newMatch( const TextMatch& match )
 {
-    if ( m_matchesCache )
-        m_matchesCache->append( match );
+    m_matchesCache.append( match );
     emit q->newMatch( match );
 }
 
@@ -71,7 +70,6 @@ Scribo::TextMatcher::TextMatcher( QObject* parent )
       d( new Private() )
 {
     d->m_loop = 0;
-    d->m_matchesCache = 0;
     d->q = this;
 }
 
@@ -116,18 +114,20 @@ void Scribo::TextMatcher::getPossibleMatches( const QString& text )
 
 QList<Scribo::TextMatch> Scribo::TextMatcher::getAllPossibleMatches( const QString& text )
 {
-    QList<TextMatch> matches;
     QEventLoop loop;
     d->m_loop = &loop;
-    d->m_matchesCache = &matches;
 
     getPossibleMatches( text );
 
     loop.exec();
     d->m_loop = 0;
-    d->m_matchesCache = 0;
-    return matches;
+    return matches();
 }
 
+
+QList<Scribo::TextMatch> Scribo::TextMatcher::matches() const
+{
+    return d->m_matchesCache;
+}
 
 #include "textmatcher.moc"

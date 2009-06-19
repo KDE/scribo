@@ -45,7 +45,16 @@ namespace Scribo {
         TextMatcher( QObject* parent = 0 );
         ~TextMatcher();
 
+        /**
+         * Blocks until all matches have been found.
+         */
         QList<TextMatch> getAllPossibleMatches( const QString& text );
+
+        /**
+         * \return A list of all matches.
+         * Makes only sense to call after finished has been emitted.
+         */
+        QList<TextMatch> matches() const;
 
     Q_SIGNALS:
         void newMatch( const Scribo::TextMatch& match );
