@@ -24,6 +24,7 @@
 #include "textmatchplugin.h"
 
 #include <QtCore/QVariant>
+#include <QtCore/QStringList>
 
 /**
  * TextMatchPlugin that simply looks through the text, looking for each word
@@ -42,11 +43,12 @@ protected:
 
 private Q_SLOTS:
     void scanText();
-    void queryWord( const QString& word );
+    bool queryWord( const QString& word );
 
 private:
     QString m_text;
     int m_pos;
+    QStringList m_stopWords;
 };
 
 #endif

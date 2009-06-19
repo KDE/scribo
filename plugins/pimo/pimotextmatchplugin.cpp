@@ -45,6 +45,14 @@ namespace {
 PimoTextMatchPlugin::PimoTextMatchPlugin( QObject* parent, const QVariantList& )
     : TextMatchPlugin( parent )
 {
+    m_stopWords << QLatin1String( "and" )
+                << QLatin1String( "or" )
+                << QLatin1String( "the" )
+                << QLatin1String( "that" )
+                << QLatin1String( "this" )
+                << QLatin1String( "there" )
+                << QLatin1String( "for" )
+                << QLatin1String( "with" );
 }
 
 
@@ -83,11 +91,14 @@ void PimoTextMatchPlugin::scanText()
 }
 
 
-void PimoTextMatchPlugin::queryWord( const QString& word )
+bool PimoTextMatchPlugin::queryWord( const QString& word )
 {
     if ( word.length() < s_minLength ) {
 //        kDebug() << word << "too short";
-        return;
+        return false;
+    }
+    else if ( m_stopWords.contains( word.toLower() ) ) {
+        return false;
     }
 
 //    kDebug() << "checking word" << word;
@@ -114,6 +125,8 @@ void PimoTextMatchPlugin::queryWord( const QString& word )
             addNewMatch( entity );
         }
     }
+
+    return true;
 }
 
 
