@@ -190,12 +190,14 @@ void DateTimeTextMatchPlugin::doGetPossibleMatches( const QString& text )
         s2.addOccurrence( oc2 );
         addNewMatch( s2 );
     }
+
+    emitFinished();
 }
 
 
 void DateTimeTextMatchPlugin::lookForYears( const QRegExp& regExp )
 {
-    kDebug() << regExp.pattern();
+//    kDebug() << regExp.pattern();
     int pos = 0;
     while ( ( pos = regExp.indexIn( m_text, pos ) ) != -1 ) {
         int year = regExp.cap( 0 ).toInt();
@@ -212,7 +214,7 @@ void DateTimeTextMatchPlugin::lookForYears( const QRegExp& regExp )
 
 void DateTimeTextMatchPlugin::lookForDates( const QRegExp& regExp, const QString& format, bool forceCurrentYear )
 {
-    kDebug() << regExp.pattern() << format << forceCurrentYear;
+//    kDebug() << regExp.pattern() << format << forceCurrentYear;
     int pos = 0;
     while ( ( pos = regExp.indexIn( m_text, pos ) ) != -1 ) {
         QDate date = m_enLocale.toDate( regExp.cap( 0 ), format );
@@ -233,7 +235,7 @@ void DateTimeTextMatchPlugin::lookForDates( const QRegExp& regExp, const QString
 
 void DateTimeTextMatchPlugin::lookForDateRanges( const QRegExp& regExp, const QString& format, int dateCap, int rangeEndCap, int yearCap, bool forceCurrentYear )
 {
-    kDebug() << regExp.pattern() << format;
+//    kDebug() << regExp.pattern() << format;
     int pos = 0;
     while ( ( pos = regExp.indexIn( m_text, pos ) ) != -1 ) {
         QDate startDate = m_enLocale.toDate( regExp.cap( dateCap ), format );
@@ -261,7 +263,7 @@ void DateTimeTextMatchPlugin::lookForDateRanges( const QRegExp& regExp, const QS
 
 void DateTimeTextMatchPlugin::lookForTimes( const QRegExp& regExp, const QString& format )
 {
-    kDebug() << regExp.pattern() << format;
+//    kDebug() << regExp.pattern() << format;
     int pos = 0;
     while ( ( pos = regExp.indexIn( m_text, pos ) ) != -1 ) {
         QTime time = QTime::fromString( regExp.cap( 0 ), format );
