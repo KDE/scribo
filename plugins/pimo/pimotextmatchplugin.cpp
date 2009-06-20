@@ -73,7 +73,7 @@ void PimoTextMatchPlugin::scanText()
 {
     // extract next word
     int pos = m_text.indexOf( QRegExp( "\\W" ), m_pos );
-    if ( pos > 0 ) {
+    if ( pos != -1 ) {
         QString word = m_text.mid( m_pos, pos-m_pos ).simplified();
         queryWord( word );
 
