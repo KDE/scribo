@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=CEA WebContent text match plugin
+Comment=Scribo text match plugin which uses the CEA WebContent web service to analyse text and extract entities
+X-KDE-ServiceTypes=Scribo/TextMatchPlugin
+Type=Service
+X-KDE-Library=scribo_webcontenttextmatchplugin
+
+X-KDE-PluginInfo-Name=scribo_webcontenttextmatchplugin
+X-KDE-PluginInfo-Author=Sebastian Trueg
+X-KDE-PluginInfo-Email=trueg@kde.org
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-EnabledByDefault=true
