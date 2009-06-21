@@ -11,7 +11,7 @@ include_directories(
 # plugin
 set(webc_SCRS
   webcontenttextmatchplugin.cpp
-  qtsoap/qtsoap.cpp
+#  qtsoap/qtsoap.cpp
   )
 
 #kde4_add_kcfg_files(webc_SCRS webcontentconfig.kcfgc)
