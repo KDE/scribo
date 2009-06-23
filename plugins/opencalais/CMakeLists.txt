@@ -1,4 +1,4 @@
-include(MacroAddOntology)
+include(SopranoAddOntology)
 
 include_directories(
   ${QT_INCLUDES}
@@ -26,8 +26,8 @@ set(OCTMP_SCRS
   opencalaistextmatchplugin.cpp
   )
 
-kde4_add_ontology(OCTMP_SCRS ${CMAKE_CURRENT_SOURCE_DIR}/opencalais.rdfs "OpenCalais" "Nepomuk::Vocabulary" "rdfxml")
-kde4_add_ontology(OCTMP_SCRS ${NFO_TRIG_SOURCE} "NFO" "Nepomuk::Vocabulary" "trig")
+soprano_add_ontology(OCTMP_SCRS ${CMAKE_CURRENT_SOURCE_DIR}/opencalais.rdfs "OpenCalais" "Nepomuk::Vocabulary" "rdfxml")
+soprano_add_ontology(OCTMP_SCRS ${NFO_TRIG_SOURCE} "NFO" "Nepomuk::Vocabulary" "trig")
 
 kde4_add_kcfg_files(OCTMP_SCRS opencalaisconfig.kcfgc)
 
