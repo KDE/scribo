@@ -1,6 +1,18 @@
 [Desktop Entry]
 Name=CEA WebContent text match plugin
+Name[et]=CEA WebContenti tekstivastavuse plugin
+Name[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ​មាតិកា​បណ្ដាញ​របស់ CEA
+Name[pt]='Plugin' de correspondência de texto do conteúdo web da CEA
+Name[pt_BR]='Plugin' de correspondência de texto do conteúdo web da CEA
+Name[sv]=Insticksprogram för textmatchning av CEA-webbinnehåll
+Name[uk]=Додаток пошуку тексту CEA WebContent
 Comment=Scribo text match plugin which uses the CEA WebContent web service to analyse text and extract entities
+Comment[et]=Scribo tekstivastavuse plugin, mis kasutab teksti analüüsimiseks CEA WebContenti veebiteenus ja hangib olemid
+Comment[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ Scribo ដែល​ប្រើ​សេវា​បណ្ដាញ  OpenCalais ដើម្បី​វិភាគ​អត្ថបទ និង​ស្រង់​ធាតុ​ និងសេចក្ដី​ថ្លែងការណ៍​ចេញ
+Comment[pt]=Um 'plugin' de correspondência de texto do Scribo que usa o serviço Web WebContent da CEA para analisar o texto e extrair as entidades
+Comment[pt_BR]=Um 'plugin' de correspondência de texto do Scribo que usa o serviço Web WebContent da CEA para analisar o texto e extrair as entidades
+Comment[sv]=Scribo insticksprogram för textmatchning som använder webbtjänsten CEA-webbinnehåll för att analysera text och extrahera enheter
+Comment[uk]=Додаток пошуку тексту Scribo, який використовує службу CEA WebContent для аналізу тексту і видобування категорій
 X-KDE-ServiceTypes=Scribo/TextMatchPlugin
 Type=Service
 X-KDE-Library=scribo_webcontenttextmatchplugin
