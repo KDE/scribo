@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Datetime text match plugin
 Name[et]=Kuupäeva ja kellaaja tekstivastavuse plugin
+Name[fr]=Module de comparaison textuelle de date et heure
 Name[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ​កាលបរិច្ឆេទ​ពេលវេលា
 Name[pt]='Plugin' de correspondência de texto de datas/horas
 Name[pt_BR]='Plugin' de correspondência de texto de datas/horas
@@ -9,6 +10,7 @@ Name[uk]=Додаток пошуку тексту дати і часу
 Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
 Comment[et]=Scribo tekstivastavuse plugin, mis hangib tekstist kuupäevad ja kellaajad ning esitab need lihtavaldistena
+Comment[fr]=Module de comparaison textuelle qui extrait des dates et heures du texte et les présent comme de simples statuts
 Comment[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ Scribo ដែល​ស្រង់​ពេលវេលា និងកាលបរិច្ឆេទ​ចេញ​ពី​អត្ថបទ ហើយ​បង្ហាញ​ពួកវា​ក្នុង​សេចក្ដីថ្លែងការណ៍​ធម្មតា
 Comment[pt]=Um 'plugin' de correspondência de texto do Scribo que extrai as datas e horas do texto e apresenta-as como frases simples
 Comment[pt_BR]=Um 'plugin' de correspondência de texto do Scribo que extrai as datas e horas do texto e apresenta-as como frases simples
