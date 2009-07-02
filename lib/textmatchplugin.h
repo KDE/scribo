@@ -61,7 +61,7 @@ namespace Scribo {
          *
          * This will emit the newMatch signal.
          */
-        void addNewMatch( const TextMatch& );
+        void addNewMatch( const Scribo::TextMatch& );
 
         virtual void doGetPossibleMatches( const QString& ) = 0;
 
