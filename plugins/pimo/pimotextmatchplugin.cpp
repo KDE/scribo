@@ -52,6 +52,10 @@ PimoTextMatchPlugin::PimoTextMatchPlugin( QObject* parent, const QVariantList& )
                 << QLatin1String( "this" )
                 << QLatin1String( "there" )
                 << QLatin1String( "for" )
+                << QLatin1String( "not" )
+                << QLatin1String( "are" )
+                << QLatin1String( "but" )
+                << QLatin1String( "into" )
                 << QLatin1String( "with" );
 }
 
