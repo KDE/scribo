@@ -63,9 +63,9 @@ bool OpenCalais::LookupJob::Private::createModel()
     delete resultModel;
 
     // sesame2 is waaaay faster then redland which is the default in Soprano
-//      if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
-//          resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
-//      else
+     if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
+         resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
+     else
         resultModel = Soprano::createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
 
     return resultModel;
