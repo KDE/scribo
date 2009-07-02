@@ -52,6 +52,7 @@ public:
 
     QString content;
     Soprano::Model* resultModel;
+    bool modelRetrieved;
 
     bool createModel();
 };
@@ -62,9 +63,9 @@ bool OpenCalais::LookupJob::Private::createModel()
     delete resultModel;
 
     // sesame2 is waaaay faster then redland which is the default in Soprano
-     if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
-         resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
-     else
+//      if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
+//          resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
+//      else
         resultModel = Soprano::createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
 
     return resultModel;
@@ -82,13 +83,16 @@ OpenCalais::LookupJob::LookupJob( QObject* parent )
 
 OpenCalais::LookupJob::~LookupJob()
 {
-    delete d->resultModel;
+    // if no one took the model, we delete it
+    if ( !d->modelRetrieved )
+        delete d->resultModel;
     delete d;
 }
 
 
-const Soprano::Model* OpenCalais::LookupJob::resultModel() const
+Soprano::Model* OpenCalais::LookupJob::resultModel() const
 {
+    d->modelRetrieved = true;
     return d->resultModel;
 }
 
@@ -103,6 +107,7 @@ void OpenCalais::LookupJob::start()
 {
     delete d->resultModel;
     d->resultModel = 0;
+    d->modelRetrieved = false;
 
     QUrl url(  "http://api.opencalais.com/enlighten/rest/" );
 

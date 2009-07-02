@@ -18,46 +18,45 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef _OPEN_CALAIS_LOOKUP_JOB_H_
-#define _OPEN_CALAIS_LOOKUP_JOB_H_
+#ifndef _WORKER_H_
+#define _WORKER_H_
 
-#include <KJob>
+#include <QtCore/QThread>
 
+class OpenCalaisTextMatchPlugin;
 namespace Soprano {
     class Model;
 }
-
-namespace OpenCalais {
-    class LookupJob : public KJob
-    {
-        Q_OBJECT
-
-    public:
-        LookupJob( QObject* parent = 0 );
-        ~LookupJob();
-
-        /**
-         * OpenCalais reports the results as a graph.
-         *
-         * \return The model containing the data or 0 if no request has
-         * been finished successfully. The caller takes ownershop of the
-         * model.
-         */
-        Soprano::Model* resultModel() const;
-
-    public Q_SLOTS:
-        void start();
-
-        void setContent( const QString& );
-
-    private Q_SLOTS:
-        void slotTransferResult();
-        void slotConfigure();
-
-    private:
-        class Private;
-        Private* const d;
-    };
+namespace Scribo {
+    class TextMatch;
 }
+
+
+class Worker : public QThread
+{
+    Q_OBJECT
+
+public:
+    Worker( OpenCalaisTextMatchPlugin* plugin );
+    ~Worker();
+
+    void setModel( Soprano::Model* model ) {
+        m_model = model;
+    }
+
+    void run();
+    void cancel();
+
+Q_SIGNALS:
+    void newMatch( const Scribo::TextMatch& );
+
+private:
+    void addNewMatch( const Scribo::TextMatch& );
+
+    Soprano::Model* m_model;
+    OpenCalaisTextMatchPlugin* m_plugin;
+
+    bool m_canceled;
+};
 
 #endif

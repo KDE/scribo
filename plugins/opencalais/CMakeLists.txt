@@ -24,6 +24,7 @@ endif(NOT NFO_TRIG_SOURCE)
 set(OCTMP_SCRS
   lookupjob.cpp
   opencalaistextmatchplugin.cpp
+  worker.cpp
   )
 
 soprano_add_ontology(OCTMP_SCRS ${CMAKE_CURRENT_SOURCE_DIR}/opencalais.rdfs "OpenCalais" "Nepomuk::Vocabulary" "rdfxml")

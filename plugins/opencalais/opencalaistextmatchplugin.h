@@ -33,6 +33,7 @@ namespace OpenCalais {
     class LookupJob;
 }
 class KJob;
+class Worker;
 
 class OpenCalaisTextMatchPlugin : public Scribo::TextMatchPlugin
 {
@@ -42,6 +43,8 @@ public:
     OpenCalaisTextMatchPlugin( QObject* parent, const QVariantList& );
     ~OpenCalaisTextMatchPlugin();
 
+    QUrl matchPimoType( const QUrl& openCalaisType );
+
 protected:
     void doGetPossibleMatches( const QString& text );
 
@@ -49,10 +52,10 @@ private Q_SLOTS:
     void slotResult( KJob* );
 
 private:
-    QUrl matchPimoType( const QUrl& openCalaisType );
-
     OpenCalais::LookupJob* m_lookupJob;
     QHash<QUrl, QUrl> m_typeMap;
+
+    Worker* m_worker;
 };
 
 #endif
