@@ -69,7 +69,7 @@ bool OpenCalais::LookupJob::Private::createModel()
         resultModel = Soprano::createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
 
     return resultModel;
-};
+}
 
 
 OpenCalais::LookupJob::LookupJob( QObject* parent )
