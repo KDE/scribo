@@ -11,15 +11,6 @@ include_directories(
   ${pimolib_SOURCE_DIR}
   )
 
-find_file(NFO_TRIG_SOURCE 
-  nfo.trig
-  PATHS "${KDE4_DATA_INSTALL_DIR}/.." "${KDE4_DATA_INSTALL_DIR}" ENV XDG_DATA_DIRS
-  PATH_SUFFIXES "apps/nepomuk/ontologies"
-  )
-if(NOT NFO_TRIG_SOURCE)
-  message(ERROR_FATAL "Could not find nfo.trig NFO source file. Is kdebase-runtime installed?")
-endif(NOT NFO_TRIG_SOURCE)
-
 # plugin
 set(OCTMP_SCRS
   lookupjob.cpp
@@ -28,7 +19,6 @@ set(OCTMP_SCRS
   )
 
 soprano_add_ontology(OCTMP_SCRS ${CMAKE_CURRENT_SOURCE_DIR}/opencalais.rdfs "OpenCalais" "Nepomuk::Vocabulary" "rdfxml")
-soprano_add_ontology(OCTMP_SCRS ${NFO_TRIG_SOURCE} "NFO" "Nepomuk::Vocabulary" "trig")
 
 kde4_add_kcfg_files(OCTMP_SCRS opencalaisconfig.kcfgc)
 
@@ -41,6 +31,7 @@ target_link_libraries(scribo_opencalaistextmatchplugin
   ${QT_QTNETWORK_LIBRARY}
   scribo
   pimo
+  nie
 )
 install(TARGETS scribo_opencalaistextmatchplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES scribo_opencalaistextmatchplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR}/scribotextmatchplugins)
