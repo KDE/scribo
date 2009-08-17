@@ -118,7 +118,7 @@ void OpenCalais::LookupJob::start()
         KNotification* n = KNotification::event( KNotification::Warning,
                                                  i18n( "No OpenCalais API key configured." ) );
         n->setActions( QStringList() << i18n( "Configure..." ) );
-        connect( n, SIGNAL( action1Activated() ), this, SLOT( slotConfigure() ) );
+        connect( n, SIGNAL( activated() ), this, SLOT( slotConfigure() ) );
         emitResult();
         return;
     }

@@ -7,8 +7,6 @@ include_directories(
   ${CMAKE_SOURCE_DIR}
   ${libscribo_SOURCE_DIR}
   ${CMAKE_CURRENT_BINARY_DIR}
-  ${pimolib_BINARY_DIR}
-  ${pimolib_SOURCE_DIR}
   )
 
 # plugin
@@ -30,8 +28,7 @@ target_link_libraries(scribo_opencalaistextmatchplugin
   ${KDE4_KDEUI_LIBS}
   ${QT_QTNETWORK_LIBRARY}
   scribo
-  pimo
-  nie
+  nepomukutils
 )
 install(TARGETS scribo_opencalaistextmatchplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES scribo_opencalaistextmatchplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR}/scribotextmatchplugins)
