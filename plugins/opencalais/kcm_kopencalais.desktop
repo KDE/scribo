@@ -5,6 +5,7 @@ Type=Service
 Name=Open Calais
 Name[x-test]=xxOpen Calaisxx
 Comment=Configure the Open Calais Scribo plugin
+Comment[es]=Configura el complemento de Scribo de Open Calais
 Comment[et]=Open Calais' Scribo plugina seadistamine
 Comment[fr]=Configurer le module Open Calais pour Scribo
 Comment[km]=កំណត់​រចនាសម្ព័ន្ធ​​ការ​បើក​កម្មវិធី​ជំនួយ Calais Scribo
