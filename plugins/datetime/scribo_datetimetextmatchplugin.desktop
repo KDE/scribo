@@ -9,6 +9,7 @@ Name[sv]=Insticksprogram för notering av extraherade nyckelord
 Name[uk]=Додаток пошуку тексту дати і часу
 Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
+Comment[es]=Complemento de coincidencia de texto de Scribo que extra fechas y horas de un texto y los presenta como simples afirmaciones
 Comment[et]=Scribo tekstivastavuse plugin, mis hangib tekstist kuupäevad ja kellaajad ning esitab need lihtavaldistena
 Comment[fr]=Module de comparaison textuelle qui extrait des dates et heures du texte et les présent comme de simples statuts
 Comment[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ Scribo ដែល​ស្រង់​ពេលវេលា និងកាលបរិច្ឆេទ​ចេញ​ពី​អត្ថបទ ហើយ​បង្ហាញ​ពួកវា​ក្នុង​សេចក្ដីថ្លែងការណ៍​ធម្មតា
