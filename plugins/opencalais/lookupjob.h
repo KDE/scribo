@@ -52,7 +52,6 @@ namespace OpenCalais {
 
     private Q_SLOTS:
         void slotTransferResult();
-        void slotConfigure();
 
     private:
         class Private;

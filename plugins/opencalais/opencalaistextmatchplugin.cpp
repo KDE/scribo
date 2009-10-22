@@ -21,6 +21,7 @@
 #include "opencalaistextmatchplugin.h"
 #include "lookupjob.h"
 #include "worker.h"
+#include "opencalaisconfig.h"
 
 #include "entity.h"
 #include "statement.h"
@@ -39,8 +40,11 @@
 
 #include <KDebug>
 #include <KPluginFactory>
+#include <KNotification>
 
 #include <QtCore/QCoreApplication>
+#include <QtCore/QProcess>
+
 
 Q_DECLARE_METATYPE( Scribo::TextMatch )
 
@@ -75,13 +79,28 @@ void OpenCalaisTextMatchPlugin::doGetPossibleMatches( const QString& text )
 {
     // cancel previous jobs
     delete m_lookupJob;
+    m_lookupJob = 0;
 
-    // do the lookup
-    m_lookupJob = new OpenCalais::LookupJob( this );
-    connect( m_lookupJob, SIGNAL( result( KJob* ) ),
-             this, SLOT( slotResult( KJob* ) ) );
-    m_lookupJob->setContent( text );
-    m_lookupJob->start();
+    if ( OpenCalais::Config::licenseKey().isEmpty() ) {
+        kDebug() << "no key";
+        if ( OpenCalais::Config::showKeyWarning() ) {
+            KNotification* n = KNotification::event( KNotification::Warning,
+                                                     i18n( "No OpenCalais API key configured." ) );
+            n->setActions( QStringList() << i18n( "Configure..." ) );
+            connect( n, SIGNAL( action1Activated() ), this, SLOT( slotConfigure() ) );
+            OpenCalais::Config::self()->findItem( "ShowKeyWarning" )->setProperty( false );
+//            OpenCalais::Config::self()->writeConfig();
+        }
+        emitFinished();
+    }
+    else {
+        // do the lookup
+        m_lookupJob = new OpenCalais::LookupJob( this );
+        connect( m_lookupJob, SIGNAL( result( KJob* ) ),
+                 this, SLOT( slotResult( KJob* ) ) );
+        m_lookupJob->setContent( text );
+        m_lookupJob->start();
+    }
 }
 
 
@@ -113,6 +132,13 @@ QUrl OpenCalaisTextMatchPlugin::matchPimoType( const QUrl& openCalaisType )
         return Nepomuk::Vocabulary::PIMO::Thing();
     else
         return *it;
+}
+
+
+void OpenCalaisTextMatchPlugin::slotConfigure()
+{
+    kDebug();
+    QProcess::startDetached( "kcmshell4", QStringList() << "kcm_kopencalais" );
 }
 
 SCRIBO_EXPORT_TEXTMATCH_PLUGIN( OpenCalaisTextMatchPlugin, "scribo_opencalaistextmatchplugin" )

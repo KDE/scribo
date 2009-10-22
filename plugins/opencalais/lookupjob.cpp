@@ -34,14 +34,12 @@
 
 #include <KLocale>
 #include <KDebug>
-#include <KNotification>
 
 #include <QtNetwork/QNetworkAccessManager>
 #include <QtNetwork/QNetworkRequest>
 #include <QtNetwork/QNetworkReply>
 
 #include <QtCore/QFile>
-#include <QtCore/QProcess>
 
 
 class OpenCalais::LookupJob::Private
@@ -109,16 +107,12 @@ void OpenCalais::LookupJob::start()
     d->resultModel = 0;
     d->modelRetrieved = false;
 
-    QUrl url(  "http://api.opencalais.com/enlighten/rest/" );
+    QUrl url( "http://api.opencalais.com/enlighten/rest/" );
 
     QString key = Config::licenseKey();
     if ( key.isEmpty() ) {
         kDebug() << "no key";
         setErrorText( i18n( "No OpenCalais API key configured." ) );
-        KNotification* n = KNotification::event( KNotification::Warning,
-                                                 i18n( "No OpenCalais API key configured." ) );
-        n->setActions( QStringList() << i18n( "Configure..." ) );
-        connect( n, SIGNAL( activated() ), this, SLOT( slotConfigure() ) );
         emitResult();
         return;
     }
@@ -184,12 +178,6 @@ void OpenCalais::LookupJob::slotTransferResult()
     }
 
     emitResult();
-}
-
-
-void OpenCalais::LookupJob::slotConfigure()
-{
-    QProcess::startDetached( "kcmshell4", QStringList() << "kcm_kopencalais" );
 }
 
 #include "lookupjob.moc"

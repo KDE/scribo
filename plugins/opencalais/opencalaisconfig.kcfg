@@ -9,4 +9,10 @@
       <label>Open Calais registration key</label>
     </entry>
   </group>
+  <group name="General">
+    <entry key="Show Key Warning" type="bool">
+      <label>Show a warning if Key is missing</label>
+      <default>true</default>
+    </entry>
+  </group>
 </kcfg>

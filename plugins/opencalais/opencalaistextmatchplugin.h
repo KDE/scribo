@@ -45,6 +45,9 @@ public:
 
     QUrl matchPimoType( const QUrl& openCalaisType );
 
+public Q_SLOTS:
+    void slotConfigure();
+
 protected:
     void doGetPossibleMatches( const QString& text );
 
