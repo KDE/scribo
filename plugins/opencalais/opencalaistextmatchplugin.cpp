@@ -89,7 +89,7 @@ void OpenCalaisTextMatchPlugin::doGetPossibleMatches( const QString& text )
             n->setActions( QStringList() << i18n( "Configure..." ) );
             connect( n, SIGNAL( action1Activated() ), this, SLOT( slotConfigure() ) );
             OpenCalais::Config::self()->findItem( "ShowKeyWarning" )->setProperty( false );
-//            OpenCalais::Config::self()->writeConfig();
+            OpenCalais::Config::self()->writeConfig();
         }
         emitFinished();
     }
