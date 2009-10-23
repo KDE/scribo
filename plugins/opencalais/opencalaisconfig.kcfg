@@ -10,7 +10,7 @@
     </entry>
   </group>
   <group name="General">
-    <entry key="Show Key Warning" type="bool">
+    <entry key="Show Key Warning" type="Bool">
       <label>Show a warning if Key is missing</label>
       <default>true</default>
     </entry>
