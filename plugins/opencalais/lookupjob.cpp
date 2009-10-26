@@ -60,10 +60,10 @@ bool OpenCalais::LookupJob::Private::createModel()
 {
     delete resultModel;
 
-    // sesame2 is waaaay faster then redland which is the default in Soprano
-    if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
-        resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
-    else
+    // sesame2 is waaaay faster then redland which is the default in Soprano but it crashes sometimes. So that needs fixing first.
+//     if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
+//         resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
+//     else
         resultModel = Soprano::createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
 
     return resultModel;
@@ -160,7 +160,7 @@ void OpenCalais::LookupJob::slotTransferResult()
     // FIXME: error handling
     QByteArray data = d->lastReply->readAll();
 //    kDebug() << d->lastReply->error() << d->lastReply->rawHeaderList() << data;
-    delete d->lastReply;
+    d->lastReply->deleteLater();
 
     if ( !d->createModel() ) {
         setErrorText( i18n( "Failed to create Soprano memory model. Most likely the installation misses Soprano backend plugins" ) );
