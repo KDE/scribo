@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Pimo text match plugin
+Name[en_GB]=Pimo text match plugin
 Name[es]=Complemento de búsqueda de texto de Pimo
 Name[et]=PIMO tekstivastavuse plugin
 Name[fr]=Module de comparaison textuelle Pimo
@@ -11,6 +12,7 @@ Name[sv]=Pimo insticksprogram för textmatchning
 Name[uk]=Додаток пошуку тексту Pimo
 Name[x-test]=xxPimo text match pluginxx
 Comment=Scribo text match plugin which simply tries to match words in the text to Pimo things in Nepomuk
+Comment[en_GB]=Scribo text match plugin which simply tries to match words in the text to Pimo things in Nepomuk
 Comment[es]=Complemento de búsqueda de texto de Scribo que busca palabras en un texto para obtener objetos Pimo en Nepomuk
 Comment[et]=Scribo tekstivastavuse plugin, mis lihtsalt püüab seada tekstis esinevad sõnad vastavusse Nepomuki PIMO asjadega
 Comment[fr]=Module de comparaison textuelle pour Scribo qui tente simplement de faire correspondre des mots du texte avec des choses issues de Pimo dans Nepomuk

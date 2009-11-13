@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=Datetime text match plugin
+Name[en_GB]=Datetime text match plugin
 Name[et]=Kuupäeva ja kellaaja tekstivastavuse plugin
 Name[fr]=Module de comparaison textuelle de date et heure
 Name[hr]=Priključak za podudaranje teksta datuma i vremena
@@ -10,6 +11,7 @@ Name[sv]=Insticksprogram för notering av extraherade nyckelord
 Name[uk]=Додаток пошуку тексту дати і часу
 Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
+Comment[en_GB]=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
 Comment[es]=Complemento de coincidencia de texto de Scribo que extra fechas y horas de un texto y los presenta como simples afirmaciones
 Comment[et]=Scribo tekstivastavuse plugin, mis hangib tekstist kuupäevad ja kellaajad ning esitab need lihtavaldistena
 Comment[fr]=Module de comparaison textuelle qui extrait des dates et heures du texte et les présent comme de simples statuts

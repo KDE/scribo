@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=OpenCalais text match plugin
+Name[en_GB]=OpenCalais text match plugin
 Name[es]=Complemento de búsqueda de texto de OpenCalais
 Name[et]=OpenCalais' tekstivastavuse plugin
 Name[fr]=Module de comparaison textuelle pour Open Calais
@@ -11,6 +12,7 @@ Name[sv]=Open Calais insticksprogram för textmatchning
 Name[uk]=Додаток пошуку тексту OpenCalais
 Name[x-test]=xxOpenCalais text match pluginxx
 Comment=Scribo text match plugin which uses the OpenCalais web service to analyse text and extract entities and statements
+Comment[en_GB]=Scribo text match plugin which uses the OpenCalais web service to analyse text and extract entities and statements
 Comment[es]=Complemento de búsqueda de texto de Scribo que usa el servicio web OpenCalais para analizar texto y extraer entidades y afirmaciones
 Comment[et]=Scribo tekstivastavuse plugin, mis kasutab teksti analüüsimiseks OpenCalais' veebiteenust ning hangib olemid ja avaldised
 Comment[fr]=Module de comparaison textuelle pour Scribo s'appuyant sur le webservice OpenCalais pour analyser le texte et extraire des éléments et statuts

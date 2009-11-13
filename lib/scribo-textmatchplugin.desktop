@@ -3,6 +3,7 @@ Type=ServiceType
 X-KDE-ServiceType=Scribo/TextMatchPlugin
 
 Comment=Scribo text match plugin
+Comment[en_GB]=Scribo text match plugin
 Comment[es]=Complemento de coincidencia de texto de Scribo
 Comment[et]=Scribo tekstivastavuse plugin
 Comment[fr]=Module de comparaison textuelle pour Scribo
