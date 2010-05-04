@@ -14,8 +14,8 @@ set(pimotextmatchplugin_SRCS
 kde4_add_plugin(scribo_pimotextmatchplugin ${pimotextmatchplugin_SRCS})
 target_link_libraries(scribo_pimotextmatchplugin
   ${NEPOMUK_LIBRARIES}
+  ${NEPOMUK_QUERY_LIBRARIES}
   ${SOPRANO_LIBRARIES}
-  ${SOPRANO_INDEX_LIBRARIES}
   ${KDE4_KDECORE_LIBS}
   scribo
   nepomukutils

@@ -26,13 +26,18 @@
 #include <Soprano/Model>
 #include <Soprano/QueryResultIterator>
 #include <Soprano/Node>
-#include <Soprano/Index/IndexFilterModel>
 #include <Soprano/Vocabulary/NAO>
 #include <Soprano/Graph>
 
 #include <Nepomuk/ResourceManager>
 #include <Nepomuk/Resource>
 #include <Nepomuk/Types/Class>
+#include <Nepomuk/Query/Query>
+#include <Nepomuk/Query/ComparisonTerm>
+#include <Nepomuk/Query/ResourceTypeTerm>
+#include <Nepomuk/Query/LiteralTerm>
+#include <Nepomuk/Query/AndTerm>
+#include <Nepomuk/Query/OrTerm>
 
 #include <KPluginFactory>
 #include <KDebug>
@@ -107,27 +112,30 @@ bool PimoTextMatchPlugin::queryWord( const QString& word )
 
 //    kDebug() << "checking word" << word;
 
-    QString query
-        = Soprano::Index::IndexFilterModel::encodeUriForLuceneQuery( Soprano::Vocabulary::NAO::prefLabel() )
-        + ':'
-        + Soprano::Index::IndexFilterModel::encodeStringForLuceneQuery( word );
+    Nepomuk::Query::Query query =
+        Nepomuk::Query::Query(
+            Nepomuk::Query::AndTerm(
+                Nepomuk::Query::OrTerm(
+                    Nepomuk::Query::ResourceTypeTerm( Nepomuk::Vocabulary::PIMO::Thing() ),
+                    Nepomuk::Query::ResourceTypeTerm( Soprano::Vocabulary::NAO::Tag() ) ),
+                Nepomuk::Query::LiteralTerm( word ) ) );
+
+    kDebug() << query.toSparqlQuery();
+
     Soprano::QueryResultIterator it
-        = Nepomuk::ResourceManager::instance()->mainModel()->executeQuery( query,
-                                                                           Soprano::Query::QueryLanguageUser,
-                                                                           "lucene" );
+        = Nepomuk::ResourceManager::instance()->mainModel()->executeQuery( query.toSparqlQuery(),
+                                                                           Soprano::Query::QueryLanguageSparql );
     while ( it.next() ) {
         Nepomuk::Resource res( it[0].uri() );
-        if ( res.hasType( Nepomuk::Vocabulary::PIMO::Thing() ) ) {
-            Scribo::Entity entity( res.genericLabel(), res.resourceType(), Soprano::Graph(), res );
+        Scribo::Entity entity( res.genericLabel(), res.resourceType(), Soprano::Graph(), res );
 
-            Scribo::TextOccurrence oc;
-            oc.setStartPos( m_pos );
-            oc.setLength( word.length() );
-            oc.setRelevance( it[1].literal().toDouble() );
-            entity.addOccurrence( oc );
+        Scribo::TextOccurrence oc;
+        oc.setStartPos( m_pos );
+        oc.setLength( word.length() );
+        oc.setRelevance( it[1].literal().toDouble() );
+        entity.addOccurrence( oc );
 
-            addNewMatch( entity );
-        }
+        addNewMatch( entity );
     }
 
     return true;
