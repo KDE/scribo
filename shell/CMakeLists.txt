@@ -23,7 +23,7 @@ target_link_libraries(scriboshell
   ${QT_QTDBUS_LIBRARY}
   ${KDE4_KDECORE_LIBS}
   ${KDE4_KDEUI_LIBS}
-  ${KDE4_KUTILS_LIBS}
+  ${KDE4_KCMUTILS_LIBS}
 )
 
 install(TARGETS scriboshell DESTINATION ${BIN_INSTALL_DIR})
