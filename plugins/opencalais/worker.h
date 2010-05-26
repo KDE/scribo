@@ -23,10 +23,9 @@
 
 #include <QtCore/QThread>
 
+#include <Soprano/Graph>
+
 class OpenCalaisTextMatchPlugin;
-namespace Soprano {
-    class Model;
-}
 namespace Scribo {
     class TextMatch;
 }
@@ -40,12 +39,14 @@ public:
     Worker( OpenCalaisTextMatchPlugin* plugin );
     ~Worker();
 
-    void setModel( Soprano::Model* model ) {
-        m_model = model;
+    void setData( Soprano::Graph data ) {
+        m_data = data;
     }
 
     void run();
     void cancel();
+
+    QString errorText() const { return m_errorText; }
 
 Q_SIGNALS:
     void newMatch( const Scribo::TextMatch& );
@@ -53,10 +54,12 @@ Q_SIGNALS:
 private:
     void addNewMatch( const Scribo::TextMatch& );
 
-    Soprano::Model* m_model;
+    Soprano::Graph m_data;
     OpenCalaisTextMatchPlugin* m_plugin;
 
     bool m_canceled;
+
+    QString m_errorText;
 };
 
 #endif

@@ -31,7 +31,6 @@
 
 #include <Nepomuk/Types/Class>
 
-#include <Soprano/Model>
 #include <Soprano/Graph>
 #include <Soprano/QueryResultIterator>
 #include <Soprano/Serializer>
@@ -53,6 +52,7 @@ OpenCalaisTextMatchPlugin::OpenCalaisTextMatchPlugin( QObject* parent, const QVa
     : TextMatchPlugin( parent ),
       m_lookupJob( 0 )
 {
+    kDebug();
     // build OpenCalais->PIMO type map
     // FIXME: complete the map
     m_typeMap.insert( Nepomuk::Vocabulary::OpenCalais::City(), Nepomuk::Vocabulary::PIMO::City() );
@@ -77,6 +77,7 @@ OpenCalaisTextMatchPlugin::~OpenCalaisTextMatchPlugin()
 
 void OpenCalaisTextMatchPlugin::doGetPossibleMatches( const QString& text )
 {
+    kDebug();
     // cancel previous jobs
     delete m_lookupJob;
     m_lookupJob = 0;
@@ -106,13 +107,14 @@ void OpenCalaisTextMatchPlugin::doGetPossibleMatches( const QString& text )
 
 void OpenCalaisTextMatchPlugin::slotResult( KJob* job )
 {
-    if ( Soprano::Model* model = static_cast<OpenCalais::LookupJob*>( job )->resultModel() ) {
+    kDebug();
+    if ( !job->error() ) {
         // cancel previous worker start
         m_worker->disconnect( this );
         m_worker->cancel();
 
         // restart the worker
-        m_worker->setModel( model );
+        m_worker->setData( static_cast<OpenCalais::LookupJob*>( job )->resultGraph() );
         connect( m_worker, SIGNAL( finished() ), this, SLOT( emitFinished() ) );
         connect( m_worker, SIGNAL( newMatch( Scribo::TextMatch ) ),
                  this, SLOT( addNewMatch( Scribo::TextMatch ) ),

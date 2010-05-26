@@ -21,16 +21,12 @@
 #include "lookupjob.h"
 #include "opencalaisconfig.h"
 
-#include <Soprano/Model>
+#include <Soprano/Graph>
 #include <Soprano/Parser>
 #include <Soprano/PluginManager>
 #include <Soprano/Statement>
 #include <Soprano/Node>
 #include <Soprano/StatementIterator>
-#include <Soprano/Global>
-#include <Soprano/BackendSettings>
-#include <Soprano/Backend>
-#include <Soprano/StorageModel>
 
 #include <KLocale>
 #include <KDebug>
@@ -49,49 +45,27 @@ public:
     QNetworkReply* lastReply;
 
     QString content;
-    Soprano::Model* resultModel;
-    bool modelRetrieved;
-
-    bool createModel();
+    Soprano::Graph resultGraph;
 };
-
-
-bool OpenCalais::LookupJob::Private::createModel()
-{
-    delete resultModel;
-
-    // sesame2 is waaaay faster then redland which is the default in Soprano but it crashes sometimes. So that needs fixing first.
-//     if ( const Soprano::Backend* b = Soprano::PluginManager::instance()->discoverBackendByName( "sesame2" ) )
-//         resultModel = b->createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
-//     else
-        resultModel = Soprano::createModel( Soprano::BackendSettings() << Soprano::BackendSetting( Soprano::BackendOptionStorageMemory ) );
-
-    return resultModel;
-}
 
 
 OpenCalais::LookupJob::LookupJob( QObject* parent )
     : KJob( parent ),
       d( new Private() )
 {
-    d->resultModel = 0;
     d->networkAccessManager = new QNetworkAccessManager( this );
 }
 
 
 OpenCalais::LookupJob::~LookupJob()
 {
-    // if no one took the model, we delete it
-    if ( !d->modelRetrieved )
-        delete d->resultModel;
     delete d;
 }
 
 
-Soprano::Model* OpenCalais::LookupJob::resultModel() const
+Soprano::Graph OpenCalais::LookupJob::resultGraph() const
 {
-    d->modelRetrieved = true;
-    return d->resultModel;
+    return d->resultGraph;
 }
 
 
@@ -103,10 +77,7 @@ void OpenCalais::LookupJob::setContent( const QString& s )
 
 void OpenCalais::LookupJob::start()
 {
-    delete d->resultModel;
-    d->resultModel = 0;
-    d->modelRetrieved = false;
-
+    kDebug();
     QUrl url( "http://api.opencalais.com/enlighten/rest/" );
 
     QString key = Config::licenseKey();
@@ -157,23 +128,18 @@ void OpenCalais::LookupJob::start()
 
 void OpenCalais::LookupJob::slotTransferResult()
 {
+    d->resultGraph.removeAllStatements();
+
     // FIXME: error handling
     QByteArray data = d->lastReply->readAll();
 //    kDebug() << d->lastReply->error() << d->lastReply->rawHeaderList() << data;
     d->lastReply->deleteLater();
 
-    if ( !d->createModel() ) {
-        setErrorText( i18n( "Failed to create Soprano memory model. Most likely the installation misses Soprano backend plugins" ) );
-        emitResult();
-        return;
-    }
-
     const Soprano::Parser* parser = Soprano::PluginManager::instance()->discoverParserForSerialization( Soprano::SerializationRdfXml );
     if ( parser ) {
         Soprano::StatementIterator it = parser->parseString( QString::fromUtf8( data ), QUrl(), Soprano::SerializationRdfXml );
         while ( it.next() ) {
-            Soprano::Statement s = *it;
-            d->resultModel->addStatement( s );
+            d->resultGraph.addStatement( *it );
         }
     }
 

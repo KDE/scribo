@@ -24,7 +24,7 @@
 #include <KJob>
 
 namespace Soprano {
-    class Model;
+    class Graph;
 }
 
 namespace OpenCalais {
@@ -38,12 +38,8 @@ namespace OpenCalais {
 
         /**
          * OpenCalais reports the results as a graph.
-         *
-         * \return The model containing the data or 0 if no request has
-         * been finished successfully. The caller takes ownershop of the
-         * model.
          */
-        Soprano::Model* resultModel() const;
+        Soprano::Graph resultGraph() const;
 
     public Q_SLOTS:
         void start();
