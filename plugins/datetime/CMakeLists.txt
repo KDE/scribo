@@ -17,7 +17,7 @@ target_link_libraries(scribo_datetimetextmatchplugin
   ${SOPRANO_LIBRARIES}
   ${KDE4_KDECORE_LIBS}
   scribo
-  nepomukutils
+  nepomukextras
 )
 install(TARGETS scribo_datetimetextmatchplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES scribo_datetimetextmatchplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR}/scribotextmatchplugins)

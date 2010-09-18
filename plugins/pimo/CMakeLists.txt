@@ -18,7 +18,7 @@ target_link_libraries(scribo_pimotextmatchplugin
   ${SOPRANO_LIBRARIES}
   ${KDE4_KDECORE_LIBS}
   scribo
-  nepomukutils
+  nepomukextras
 )
 install(TARGETS scribo_pimotextmatchplugin DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES scribo_pimotextmatchplugin.desktop DESTINATION ${SERVICES_INSTALL_DIR}/scribotextmatchplugins)
