@@ -1,6 +1,6 @@
 /*
  * This file is part of the Nepomuk KDE project.
- * Copyright (c) 2009 Sebastian Trueg <trueg@kde.org>
+ * Copyright (c) 2009-2010 Sebastian Trueg <trueg@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -100,6 +100,13 @@ void PimoTextMatchPlugin::scanText()
 }
 
 
+namespace {
+double calculateRankTheDumbWay(const QString& queryString, const QString& name)
+{
+    return 1.0 - double(name.length() - queryString.length()) / double(name.length());
+}
+}
+
 bool PimoTextMatchPlugin::queryWord( const QString& word )
 {
     if ( word.length() < s_minLength ) {
@@ -112,13 +119,19 @@ bool PimoTextMatchPlugin::queryWord( const QString& word )
 
 //    kDebug() << "checking word" << word;
 
+    //
+    // We search quite a lot of words. Thus, we restrict ourselves to pimo things and tags and
+    // only check their prefLabel.
+    //
     Nepomuk::Query::Query query =
         Nepomuk::Query::Query(
             Nepomuk::Query::AndTerm(
                 Nepomuk::Query::OrTerm(
                     Nepomuk::Query::ResourceTypeTerm( Nepomuk::Vocabulary::PIMO::Thing() ),
                     Nepomuk::Query::ResourceTypeTerm( Soprano::Vocabulary::NAO::Tag() ) ),
-                Nepomuk::Query::LiteralTerm( word ) ) );
+                Nepomuk::Query::ComparisonTerm( Soprano::Vocabulary::NAO::prefLabel(),
+                                                Nepomuk::Query::LiteralTerm( word ) ) ) );
+    query.setLimit( 5 );
 
     kDebug() << query.toSparqlQuery();
 
@@ -132,7 +145,7 @@ bool PimoTextMatchPlugin::queryWord( const QString& word )
         Scribo::TextOccurrence oc;
         oc.setStartPos( m_pos );
         oc.setLength( word.length() );
-        oc.setRelevance( it[1].literal().toDouble() );
+        oc.setRelevance( calculateRankTheDumbWay(word, entity.label()) );
         entity.addOccurrence( oc );
 
         addNewMatch( entity );
