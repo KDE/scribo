@@ -64,7 +64,7 @@ QDBusObjectPath Nepomuk::ScriboService::analyzeText(const QString &text)
     session->setText(text);
 
     const QString dbusObjectPath = QString( "/nepomukscriboservice/scribosession%1" ).arg( ++m_sessionCnt );
-    QDBusConnection::sessionBus().registerObject( dbusObjectPath, session );
+    QDBusConnection::sessionBus().registerObject( dbusObjectPath, session, QDBusConnection::ExportScriptableSignals|QDBusConnection::ExportScriptableSlots );
 
     QMetaObject::invokeMethod(session, "fireAndForget", Qt::QueuedConnection);
 
