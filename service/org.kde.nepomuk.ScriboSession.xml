@@ -1,0 +1,22 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+         "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+  <interface name="org.kde.nepomuk.ScriboSession">
+    <method name="text">
+      <arg name="text" type="s" direction="out" />
+    </method>
+    <method name="close" />
+    <signal name="newLocalEntity">
+      <arg name="resource" type="s" />
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In1" value="QList&lt;Scribo::TextOccurrence&gt;" />
+      <arg name="occurrences" type="a(iid)" />
+    </signal>
+    <signal name="newEntity">
+      <arg name="label" type="s" />
+      <arg name="description" type="s" />
+      <annotation name="com.trolltech.QtDBus.QtTypeName.In1" value="QList&lt;Scribo::TextOccurrence&gt;" />
+      <arg name="occurrences" type="a(iid)" />
+    </signal>
+    <signal name="finished" />
+  </interface>
+</node>
