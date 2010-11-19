@@ -33,5 +33,6 @@ install(
   DESTINATION ${PLUGIN_INSTALL_DIR})
 install(FILES
   org.kde.nepomuk.Scribo.xml
+  org.kde.nepomuk.ScriboSession.xml
   DESTINATION ${DBUS_INTERFACES_INSTALL_DIR}
   )
