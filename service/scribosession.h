@@ -43,8 +43,8 @@ public:
 
 public Q_SLOTS:
     void setText(const QString& text);
+    Q_SCRIPTABLE void start();
     Q_SCRIPTABLE QString text() const;
-    Q_SCRIPTABLE void fireAndForget();
 
 Q_SIGNALS:
     /**

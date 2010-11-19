@@ -48,7 +48,7 @@ QString ScriboSession::text() const
     return m_text;
 }
 
-void ScriboSession::fireAndForget()
+void ScriboSession::start()
 {
     kDebug() << m_text;
     m_matcher->getPossibleMatches(m_text);
@@ -59,9 +59,11 @@ void ScriboSession::slotNewMatch(const Scribo::TextMatch &match)
     if( match.isEntity() ) {
         Scribo::Entity entity = match.toEntity();
         if(entity.localResource().isValid()) {
+            kDebug() << "New local entity:" << entity.localResource().genericLabel();
             emit newLocalEntity(KUrl(entity.localResource().resourceUri()).url(), match.occurrences());
         }
         else {
+            kDebug() << "New entity:" << entity.label();
             emit newEntity(match.label(), match.comment(), match.occurrences());
         }
     }

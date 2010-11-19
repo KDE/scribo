@@ -2,6 +2,7 @@
          "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="org.kde.nepomuk.ScriboSession">
+  <method name="start" />
     <method name="text">
       <arg name="text" type="s" direction="out" />
     </method>
