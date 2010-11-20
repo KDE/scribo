@@ -11,6 +11,7 @@ include_directories(
 set(scriboservice_SRC
   scriboservice.cpp
   scribosession.cpp
+  dbusoperators.cpp
 )
 
 kde4_add_plugin(nepomukscriboservice ${scriboservice_SRC})

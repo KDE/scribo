@@ -21,6 +21,7 @@
 
 #include "scriboservice.h"
 #include "scribosession.h"
+#include "dbusoperators.h"
 
 #include <KPluginFactory>
 #include <KDebug>
@@ -38,6 +39,11 @@
 
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusObjectPath>
+#include <QtDBus/QDBusMetaType>
+
+
+Q_DECLARE_METATYPE(Scribo::TextOccurrence)
+Q_DECLARE_METATYPE(QList<Scribo::TextOccurrence>)
 
 
 /**
@@ -51,6 +57,8 @@ Nepomuk::ScriboService::ScriboService( QObject* parent, const QList<QVariant>& )
     : Service( parent ),
       m_sessionCnt(0)
 {
+    qDBusRegisterMetaType<Scribo::TextOccurrence>();
+    qDBusRegisterMetaType<QList<Scribo::TextOccurrence> >();
 }
 
 
@@ -65,8 +73,6 @@ QDBusObjectPath Nepomuk::ScriboService::analyzeText(const QString &text)
 
     const QString dbusObjectPath = QString( "/nepomukscriboservice/scribosession%1" ).arg( ++m_sessionCnt );
     QDBusConnection::sessionBus().registerObject( dbusObjectPath, session, QDBusConnection::ExportScriptableSignals|QDBusConnection::ExportScriptableSlots );
-
-    QMetaObject::invokeMethod(session, "fireAndForget", Qt::QueuedConnection);
 
     return QDBusObjectPath(dbusObjectPath);
 }
