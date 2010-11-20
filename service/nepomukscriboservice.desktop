@@ -5,4 +5,6 @@ X-KDE-Library=nepomukscriboservice
 X-KDE-Nepomuk-autostart=true
 X-KDE-Nepomuk-start-on-demand=false
 Name=Nepomuk Scribo Service
+Name[x-test]=xxNepomuk Scribo Servicexx
 Comment=The Nepomuk Scribo service offers a simple interface to Scribo's NLP facilities.
+Comment[x-test]=xxThe Nepomuk Scribo service offers a simple interface to Scribo's NLP facilities.xx
