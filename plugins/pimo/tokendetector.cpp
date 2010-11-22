@@ -89,7 +89,6 @@ TokenDetector::TokenDetector(TokenTree* tree, QObject* parent)
 TokenDetector::~TokenDetector()
 {
     qDeleteAll(m_pointers);
-    delete m_tree;
 }
 
 void TokenDetector::update(const QChar &ch)
