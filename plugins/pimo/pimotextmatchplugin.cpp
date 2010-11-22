@@ -103,10 +103,9 @@ void PimoTextMatchPlugin::WorkThread::buildTokenTree()
 {
     if(!m_tokenTree) {
         m_tokenTree = new TokenTree();
-        // populatre tree
+        // populatre tree with all resources that have a nao:prefLabel - urgh, this could be big!
         Nepomuk::Query::Query query(
-                    Nepomuk::Query::ResourceTypeTerm( Nepomuk::Vocabulary::PIMO::Thing() ) ||
-                    Nepomuk::Query::ResourceTypeTerm( Soprano::Vocabulary::NAO::Tag() )
+                    Nepomuk::Query::ComparisonTerm( Soprano::Vocabulary::NAO::prefLabel(), Nepomuk::Query::Term())
                     );
         query.addRequestProperty(Nepomuk::Query::Query::RequestProperty(Soprano::Vocabulary::NAO::prefLabel(), false));
 
