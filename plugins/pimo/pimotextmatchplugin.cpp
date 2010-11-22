@@ -22,6 +22,8 @@
 #include "pimo.h"
 #include "textoccurrence.h"
 #include "entity.h"
+#include "tokentree.h"
+#include "tokendetector.h"
 
 #include <Soprano/Model>
 #include <Soprano/QueryResultIterator>
@@ -42,26 +44,84 @@
 #include <KPluginFactory>
 #include <KDebug>
 
+#include <QtCore/QThread>
 
-namespace {
-    const int s_minLength = 3;
+class PimoTextMatchPlugin::WorkThread : public QThread
+{
+public:
+    WorkThread( QObject* parent );
+    ~WorkThread();
+
+    void start(const QString& text);
+    void run();
+
+private:
+    void buildTokenTree();
+    QString m_text;
+    TokenTree* m_tokenTree;
+};
+
+PimoTextMatchPlugin::WorkThread::WorkThread( QObject* parent )
+    : QThread(parent),
+      m_tokenTree(0)
+{
 }
 
-PimoTextMatchPlugin::PimoTextMatchPlugin( QObject* parent, const QVariantList& )
-    : TextMatchPlugin( parent )
+PimoTextMatchPlugin::WorkThread::~WorkThread()
 {
-    m_stopWords << QLatin1String( "and" )
-                << QLatin1String( "or" )
-                << QLatin1String( "the" )
-                << QLatin1String( "that" )
-                << QLatin1String( "this" )
-                << QLatin1String( "there" )
-                << QLatin1String( "for" )
-                << QLatin1String( "not" )
-                << QLatin1String( "are" )
-                << QLatin1String( "but" )
-                << QLatin1String( "into" )
-                << QLatin1String( "with" );
+    delete m_tokenTree;
+}
+
+void PimoTextMatchPlugin::WorkThread::start(const QString &text)
+{
+    m_text = text;
+    QThread::start();
+}
+
+void PimoTextMatchPlugin::WorkThread::run()
+{
+    buildTokenTree();
+    TokenDetector* detector = new TokenDetector(m_tokenTree);
+    connect(detector, SIGNAL(tokenFound(int,int,QVariant)),
+            parent(), SLOT(slotTokenFound(int,int,QVariant)),
+            Qt::QueuedConnection);
+    foreach(const QChar& ch, m_text) {
+        detector->update(ch);
+    }
+    detector->finish();
+    delete detector;
+}
+
+void PimoTextMatchPlugin::WorkThread::buildTokenTree()
+{
+    if(!m_tokenTree) {
+        m_tokenTree = new TokenTree();
+        // populatre tree
+        Nepomuk::Query::Query query(
+                    Nepomuk::Query::ResourceTypeTerm( Nepomuk::Vocabulary::PIMO::Thing() ) ||
+                    Nepomuk::Query::ResourceTypeTerm( Soprano::Vocabulary::NAO::Tag() )
+                    );
+        query.addRequestProperty(Nepomuk::Query::Query::RequestProperty(Soprano::Vocabulary::NAO::prefLabel(), false));
+
+        kDebug() << query.toSparqlQuery();
+
+        Soprano::QueryResultIterator it
+                = Nepomuk::ResourceManager::instance()->mainModel()->executeQuery( query.toSparqlQuery(),
+                                                                                  Soprano::Query::QueryLanguageSparql );
+        while ( it.next() ) {
+            const QUrl res( it[0].uri() );
+            const QString label( it[1].toString() );
+            m_tokenTree->add(label, QVariant::fromValue(res));
+        }
+    }
+}
+
+
+
+PimoTextMatchPlugin::PimoTextMatchPlugin( QObject* parent, const QVariantList& )
+    : TextMatchPlugin( parent ),
+      m_workThread(0)
+{
 }
 
 
@@ -72,88 +132,30 @@ PimoTextMatchPlugin::~PimoTextMatchPlugin()
 
 void PimoTextMatchPlugin::doGetPossibleMatches( const QString& text )
 {
-    m_text = text;
-    m_pos = 0;
-    scanText();
+    if(!m_workThread) {
+        m_workThread = new WorkThread(this);
+        connect(m_workThread, SIGNAL(finished()),
+                this, SLOT(emitFinished()));
+    }
+    m_workThread->start(text);
 }
 
 
-void PimoTextMatchPlugin::scanText()
+void PimoTextMatchPlugin::slotTokenFound(int pos, int endPos, const QVariant& value)
 {
-    // extract next word
-    int pos = m_text.indexOf( QRegExp( "\\W" ), m_pos );
-    if ( pos != -1 ) {
-        QString word = m_text.mid( m_pos, pos-m_pos ).simplified();
-        queryWord( word );
+    kDebug() << pos << endPos << value;
 
-        // scan for next word without blocking
-        m_pos = pos+1;
-        QMetaObject::invokeMethod( this, "scanText", Qt::QueuedConnection );
-    }
-    else {
-        if ( m_text.length() > m_pos ) {
-            QString word = m_text.mid( m_pos );
-            queryWord( word );
-        }
-        emitFinished();
-    }
+    Nepomuk::Resource res( value.toUrl() );
+    Scribo::Entity entity( res.genericLabel(), res.resourceType(), Soprano::Graph(), res );
+
+    Scribo::TextOccurrence oc;
+    oc.setStartPos( pos );
+    oc.setLength( endPos-pos+1 );
+    oc.setRelevance( 1.0 ); // TokenTree only produces perfect matches for now!
+    entity.addOccurrence( oc );
+
+    addNewMatch( entity );
 }
-
-
-namespace {
-double calculateRankTheDumbWay(const QString& queryString, const QString& name)
-{
-    return 1.0 - double(name.length() - queryString.length()) / double(name.length());
-}
-}
-
-bool PimoTextMatchPlugin::queryWord( const QString& word )
-{
-    if ( word.length() < s_minLength ) {
-//        kDebug() << word << "too short";
-        return false;
-    }
-    else if ( m_stopWords.contains( word.toLower() ) ) {
-        return false;
-    }
-
-//    kDebug() << "checking word" << word;
-
-    //
-    // We search quite a lot of words. Thus, we restrict ourselves to pimo things and tags and
-    // only check their prefLabel.
-    //
-    Nepomuk::Query::Query query =
-        Nepomuk::Query::Query(
-            Nepomuk::Query::AndTerm(
-                Nepomuk::Query::OrTerm(
-                    Nepomuk::Query::ResourceTypeTerm( Nepomuk::Vocabulary::PIMO::Thing() ),
-                    Nepomuk::Query::ResourceTypeTerm( Soprano::Vocabulary::NAO::Tag() ) ),
-                Nepomuk::Query::ComparisonTerm( Soprano::Vocabulary::NAO::prefLabel(),
-                                                Nepomuk::Query::LiteralTerm( word ) ) ) );
-    query.setLimit( 5 );
-
-    kDebug() << query.toSparqlQuery();
-
-    Soprano::QueryResultIterator it
-        = Nepomuk::ResourceManager::instance()->mainModel()->executeQuery( query.toSparqlQuery(),
-                                                                           Soprano::Query::QueryLanguageSparql );
-    while ( it.next() ) {
-        Nepomuk::Resource res( it[0].uri() );
-        Scribo::Entity entity( res.genericLabel(), res.resourceType(), Soprano::Graph(), res );
-
-        Scribo::TextOccurrence oc;
-        oc.setStartPos( m_pos );
-        oc.setLength( word.length() );
-        oc.setRelevance( calculateRankTheDumbWay(word, entity.label()) );
-        entity.addOccurrence( oc );
-
-        addNewMatch( entity );
-    }
-
-    return true;
-}
-
 
 SCRIBO_EXPORT_TEXTMATCH_PLUGIN( PimoTextMatchPlugin, "scribo_pimotextmatchplugin" )
 

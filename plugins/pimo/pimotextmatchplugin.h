@@ -1,6 +1,6 @@
 /*
  * This file is part of the Nepomuk KDE project.
- * Copyright (c) 2009 Sebastian Trueg <trueg@kde.org>
+ * Copyright (c) 2009-2010 Sebastian Trueg <trueg@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -26,6 +26,7 @@
 #include <QtCore/QVariant>
 #include <QtCore/QStringList>
 
+
 /**
  * TextMatchPlugin that simply looks through the text, looking for each word
  * longer than N chars in the nao:prefLabel of each thing in the Nepomuk db.
@@ -42,13 +43,11 @@ protected:
     void doGetPossibleMatches( const QString& text );
 
 private Q_SLOTS:
-    void scanText();
-    bool queryWord( const QString& word );
+    void slotTokenFound(int pos, int endPos, const QVariant &value);
 
 private:
-    QString m_text;
-    int m_pos;
-    QStringList m_stopWords;
+    class WorkThread;
+    WorkThread* m_workThread;
 };
 
 #endif

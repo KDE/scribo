@@ -9,6 +9,9 @@ include_directories(
 
 set(pimotextmatchplugin_SRCS
   pimotextmatchplugin.cpp
+  tokentree.cpp
+  tokennode.cpp
+  tokendetector.cpp
   )
 
 kde4_add_plugin(scribo_pimotextmatchplugin ${pimotextmatchplugin_SRCS})
