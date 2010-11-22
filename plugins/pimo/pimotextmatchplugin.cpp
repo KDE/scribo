@@ -59,16 +59,20 @@ private:
     void buildTokenTree();
     QString m_text;
     TokenTree* m_tokenTree;
+    bool m_canceled;
 };
 
 PimoTextMatchPlugin::WorkThread::WorkThread( QObject* parent )
     : QThread(parent),
-      m_tokenTree(0)
+      m_tokenTree(0),
+      m_canceled(false)
 {
 }
 
 PimoTextMatchPlugin::WorkThread::~WorkThread()
 {
+    m_canceled = true;
+    wait();
     delete m_tokenTree;
 }
 
@@ -87,8 +91,11 @@ void PimoTextMatchPlugin::WorkThread::run()
             Qt::QueuedConnection);
     foreach(const QChar& ch, m_text) {
         detector->update(ch);
+        if(m_canceled)
+            break;
     }
-    detector->finish();
+    if(!m_canceled)
+        detector->finish();
     delete detector;
 }
 
@@ -108,7 +115,7 @@ void PimoTextMatchPlugin::WorkThread::buildTokenTree()
         Soprano::QueryResultIterator it
                 = Nepomuk::ResourceManager::instance()->mainModel()->executeQuery( query.toSparqlQuery(),
                                                                                   Soprano::Query::QueryLanguageSparql );
-        while ( it.next() ) {
+        while ( !m_canceled && it.next() ) {
             const QUrl res( it[0].uri() );
             const QString label( it[1].toString() );
             m_tokenTree->add(label, QVariant::fromValue(res));
