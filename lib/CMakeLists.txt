@@ -30,7 +30,7 @@ target_link_libraries(
   ${KDE4_KIO_LIBS}
 )
 
-set_target_properties(scribo PROPERTIES VERSION 0.1.0 SOVERSION 0)
+set_target_properties(scribo PROPERTIES VERSION ${CMAKE_SCRIBO_VERSION_STRING} SOVERSION ${CMAKE_SCRIBO_VERSION_MAJOR})
 
 install(TARGETS scribo DESTINATION ${LIB_INSTALL_DIR})
 install(FILES
