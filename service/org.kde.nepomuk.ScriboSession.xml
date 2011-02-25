@@ -18,6 +18,9 @@
       <annotation name="com.trolltech.QtDBus.QtTypeName.In1" value="QList&lt;Scribo::TextOccurrence&gt;" />
       <arg name="occurrences" type="a(iid)" />
     </signal>
+    <signal name="textExtracted">
+      <arg name="text" type="s" />
+    </signal>
     <signal name="finished" />
   </interface>
 </node>

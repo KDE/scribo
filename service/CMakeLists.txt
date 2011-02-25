@@ -6,6 +6,7 @@ include_directories(
   ${CMAKE_SOURCE_DIR}
   ${SOPRANO_INCLUDE_DIR}
   ${NEPOMUK_INCLUDE_DIR}
+  ${NEPOMUKEXTRAS_INCLUDE_DIR}
   )
 
 set(scriboservice_SRC
@@ -23,6 +24,7 @@ target_link_libraries(nepomukscriboservice
   ${QT_QTDBUS_LIBRARY}
   ${KDE4_KDECORE_LIBS}
   ${NEPOMUK_LIBRARIES}
+  ${NEPOMUKEXTRAS_LIBRARIES}
   scribo
   )
 

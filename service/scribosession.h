@@ -1,6 +1,6 @@
 /*
    This file is part of the Nepomuk KDE project.
-   Copyright (C) 2010 Sebastian Trueg <trueg@kde.org>
+   Copyright (C) 2010-2011 Sebastian Trueg <trueg@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Lesser General Public
@@ -24,9 +24,11 @@
 
 #include <QObject>
 #include <QtCore/QList>
+#include <KUrl>
 
 #include "textoccurrence.h"
 
+class KJob;
 namespace Scribo {
 class TextMatch;
 class TextMatcher;
@@ -43,6 +45,7 @@ public:
 
 public Q_SLOTS:
     void setText(const QString& text);
+    void setImageUrl(const KUrl& url);
     Q_SCRIPTABLE void start();
     Q_SCRIPTABLE QString text() const;
 
@@ -53,17 +56,20 @@ Q_SIGNALS:
      */
     Q_SCRIPTABLE void newLocalEntity( const QString& resource, const QList<Scribo::TextOccurrence>& occurrences );
     Q_SCRIPTABLE void newEntity( const QString& label, const QString& description, const QList<Scribo::TextOccurrence>& occurrences );
+    Q_SCRIPTABLE void textExtracted( const QString& text );
     Q_SCRIPTABLE void finished();
 
 public Q_SLOTS:
     void close();
 
 private Q_SLOTS:
+    void slotTextExtractionJobResult(KJob* job);
     void slotNewMatch( const Scribo::TextMatch& match );
     void slotFinished();
 
 private:
     QString m_text;
+    KUrl m_imageUrl;
     Scribo::TextMatcher* m_matcher;
 };
 

@@ -26,6 +26,7 @@
 #include <QtCore/QVariant>
 
 class QDBusObjectPath;
+class ScriboSession;
 
 namespace Nepomuk {
     class ScriboService : public Service
@@ -43,8 +44,11 @@ namespace Nepomuk {
 
     public Q_SLOTS:
         Q_SCRIPTABLE QDBusObjectPath analyzeText(const QString& text);
+        Q_SCRIPTABLE QDBusObjectPath analyzeResource(const QString& uri);
 
     private:
+        QDBusObjectPath registerSession(ScriboSession* session);
+
         int m_sessionCnt; // used for unique dbus object path names
     };
 }

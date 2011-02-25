@@ -6,5 +6,9 @@
       <arg name="text" type="s" direction="in" />
       <arg name="session" type="o" direction="out" />
     </method>
+    <method name="analyzeResource">
+      <arg name="uri" type="s" direction="in" />
+      <arg name="session" type="o" direction="out" />
+    </method>
   </interface>
 </node>

@@ -1,6 +1,6 @@
 /*
    This file is part of the Nepomuk KDE project.
-   Copyright (C) 2010 Sebastian Trueg <trueg@kde.org>
+   Copyright (C) 2010-2011 Sebastian Trueg <trueg@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Lesser General Public
@@ -23,6 +23,8 @@
 #include "textmatcher.h"
 #include "textmatch.h"
 #include "entity.h"
+
+#include <nepomuk/textextractionjob.h>
 
 #include <KDebug>
 
@@ -51,7 +53,17 @@ QString ScriboSession::text() const
 void ScriboSession::start()
 {
     kDebug() << m_text;
-    m_matcher->getPossibleMatches(m_text);
+    if(m_text.isEmpty()) {
+        kDebug() << "Trying to extract text from an image file.";
+        Nepomuk::TextExtractionJob* job = new Nepomuk::TextExtractionJob(this);
+        connect(job, SIGNAL(result(KJob*)),
+                this, SLOT(slotTextExtractionJobResult(KJob*)));
+        job->setResource(m_imageUrl);
+        job->start();
+    }
+    else {
+        m_matcher->getPossibleMatches(m_text);
+    }
 }
 
 void ScriboSession::slotNewMatch(const Scribo::TextMatch &match)
@@ -86,4 +98,22 @@ void ScriboSession::close()
     kDebug() << m_text;
     emit finished();
     deleteLater();
+}
+
+void ScriboSession::setImageUrl(const KUrl &url)
+{
+    m_imageUrl = url;
+}
+
+void ScriboSession::slotTextExtractionJobResult(KJob *job)
+{
+    Nepomuk::TextExtractionJob* textJob = static_cast<Nepomuk::TextExtractionJob*>(job);
+    const QString extractedText = textJob->text();
+    if(!extractedText.isEmpty()) {
+        emit textExtracted(extractedText);
+        m_matcher->getPossibleMatches(extractedText);
+    }
+    else {
+        emit finished();
+    }
 }

@@ -36,6 +36,7 @@
 #include <Nepomuk/Resource>
 #include <Nepomuk/ResourceManager>
 #include <Nepomuk/Variant>
+#include <Nepomuk/Vocabulary/NIE>
 
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusObjectPath>
@@ -70,10 +71,28 @@ QDBusObjectPath Nepomuk::ScriboService::analyzeText(const QString &text)
 {
     ScriboSession* session = new ScriboSession(this);
     session->setText(text);
+    return registerSession(session);
+}
 
+QDBusObjectPath Nepomuk::ScriboService::analyzeResource(const QString &urlString)
+{
+    KUrl url(urlString);
+    Nepomuk::Resource res(url);
+    if(res.exists() && res.property(Nepomuk::Vocabulary::NIE::plainTextContent()).isValid()) {
+        return analyzeText(res.property(Nepomuk::Vocabulary::NIE::plainTextContent()).toString());
+    }
+    else {
+        // TODO: check if it is actually an image
+        ScriboSession* session = new ScriboSession(this);
+        session->setImageUrl(url);
+        return registerSession(session);
+    }
+}
+
+QDBusObjectPath Nepomuk::ScriboService::registerSession(ScriboSession *session)
+{
     const QString dbusObjectPath = QString( "/nepomukscriboservice/scribosession%1" ).arg( ++m_sessionCnt );
     QDBusConnection::sessionBus().registerObject( dbusObjectPath, session, QDBusConnection::ExportScriptableSignals|QDBusConnection::ExportScriptableSlots );
-
     return QDBusObjectPath(dbusObjectPath);
 }
 
