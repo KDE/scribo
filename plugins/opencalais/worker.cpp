@@ -1,6 +1,6 @@
 /*
  * This file is part of the Nepomuk KDE project.
- * Copyright (c) 2009 Sebastian Trueg <trueg@kde.org>
+ * Copyright (c) 2009-2011 Sebastian Trueg <trueg@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -22,11 +22,11 @@
 #include "opencalaistextmatchplugin.h"
 #include "entity.h"
 #include "statement.h"
-#include "pimo.h"
 #include "opencalais.h"
-#include "nfo.h"
 
 #include <Nepomuk/Types/Class>
+#include <Nepomuk/Vocabulary/PIMO>
+#include <Nepomuk/Vocabulary/NFO>
 
 #include <Soprano/Model>
 #include <Soprano/Graph>

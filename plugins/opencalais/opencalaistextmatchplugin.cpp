@@ -25,11 +25,11 @@
 
 #include "entity.h"
 #include "statement.h"
-#include "pimo.h"
 #include "opencalais.h"
-#include "nfo.h"
 
 #include <Nepomuk/Types/Class>
+#include <Nepomuk/Vocabulary/PIMO>
+#include <Nepomuk/Vocabulary/NFO>
 
 #include <Soprano/Graph>
 #include <Soprano/QueryResultIterator>

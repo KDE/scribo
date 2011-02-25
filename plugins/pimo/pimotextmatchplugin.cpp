@@ -1,6 +1,6 @@
 /*
  * This file is part of the Nepomuk KDE project.
- * Copyright (c) 2009-2010 Sebastian Trueg <trueg@kde.org>
+ * Copyright (c) 2009-2011 Sebastian Trueg <trueg@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -19,7 +19,6 @@
  */
 
 #include "pimotextmatchplugin.h"
-#include "pimo.h"
 #include "textoccurrence.h"
 #include "entity.h"
 #include "tokentree.h"
@@ -40,6 +39,7 @@
 #include <Nepomuk/Query/LiteralTerm>
 #include <Nepomuk/Query/AndTerm>
 #include <Nepomuk/Query/OrTerm>
+#include <Nepomuk/Vocabulary/PIMO>
 
 #include <KPluginFactory>
 #include <KDebug>

@@ -1,6 +1,6 @@
 /*
  * This file is part of the Nepomuk KDE project.
- * Copyright (c) 2009 Sebastian Trueg <trueg@kde.org>
+ * Copyright (c) 2009-2011 Sebastian Trueg <trueg@kde.org>
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -22,7 +22,6 @@
 #include "textoccurrence.h"
 #include "entity.h"
 #include "statement.h"
-#include "pimo.h"
 
 #include <Soprano/Model>
 #include <Soprano/QueryResultIterator>
@@ -32,6 +31,7 @@
 #include <Nepomuk/Types/Class>
 #include <Nepomuk/Types/Property>
 #include <Nepomuk/Variant>
+#include <Nepomuk/Vocabulary/PIMO>
 
 #include <KPluginFactory>
 #include <KDebug>
