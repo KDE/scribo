@@ -10,6 +10,8 @@ include_directories(
   ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
+configure_file(scribo_version.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/scribo_version.h)
+
 set(libopencalais_SRC
   textmatch.cpp
   textoccurrence.cpp
@@ -42,6 +44,7 @@ install(FILES
   textmatchplugin.h
   textmatcher.h
   scribo_export.h
+  ${CMAKE_CURRENT_BINARY_DIR}/scribo_version.h
   DESTINATION include/scribo)
 install(FILES scribo-textmatchplugin.desktop DESTINATION ${SERVICETYPES_INSTALL_DIR})
 
