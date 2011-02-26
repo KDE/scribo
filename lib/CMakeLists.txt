@@ -20,6 +20,7 @@ set(libopencalais_SRC
   textmatchesmodel.cpp
   textmatchplugin.cpp
   textmatcher.cpp
+  scribo_version.cpp
 )
 
 kde4_add_library(scribo SHARED ${libopencalais_SRC})
