@@ -1,8 +1,14 @@
 [Desktop Entry]
 Name=Datetime text match plugin
+Name[nds]=Datum- un Tietsöökmoduul
+Name[pt]='Plugin' de correspondência de datas/horas
 Name[uk]=Додаток пошуку тексту дати і часу
+Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
+Comment[nds]=Dat Scribo-Textsöökmoduul söcht Daten un Tieden binnen den Text un stellt de as eenfach Utsagen dor
+Comment[pt]='Plugin' de correspondência de texto do Scribo que extrai datas e horas do texto e as apresenta como frases simples
 Comment[uk]=Додаток пошуку тексту Scribo, який видобуває дані про дату і час з тексту і представляє їх як прості записи
+Comment[x-test]=xxScribo text match plugin which extracts dates and times from the text and presents them as simple statementsxx
 X-KDE-ServiceTypes=Scribo/TextMatchPlugin
 Type=Service
 X-KDE-Library=scribo_datetimetextmatchplugin

@@ -1,8 +1,14 @@
 [Desktop Entry]
 Name=Pimo text match plugin
+Name[nds]=Pimo-Textsöökmoduul
+Name[pt]='Plugin' de correspondência de texto do Pimo
 Name[uk]=Додаток пошуку тексту Pimo
+Name[x-test]=xxPimo text match pluginxx
 Comment=Scribo text match plugin which simply tries to match words in the text to Pimo things in Nepomuk
+Comment[nds]=En Scribo-Textsöökmoduul, dat eenfach Wöör binnen den Text mit Pimo-Dinger binnen Nepomuk vergliekt.
+Comment[pt]='Plugin' de correspondência de texto do Scibo que tenta simplesmente corresponder as palavras no texto a itens do Pimo no Nepomuk
 Comment[uk]=Додаток пошуку тексту Scribo, який просто намагається порівнювати слова у тексті з елементами Pimo у Nepomuk
+Comment[x-test]=xxScribo text match plugin which simply tries to match words in the text to Pimo things in Nepomukxx
 X-KDE-ServiceTypes=Scribo/TextMatchPlugin
 Type=Service
 X-KDE-Library=scribo_pimotextmatchplugin

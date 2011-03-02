@@ -1,8 +1,14 @@
 [Desktop Entry]
 Name=OpenCalais text match plugin
+Name[nds]=OpenCalais-Textsöökmoduul
+Name[pt]='Plugin' de correspondência de texto do Open Calais
 Name[uk]=Додаток пошуку тексту OpenCalais
+Name[x-test]=xxOpenCalais text match pluginxx
 Comment=Scribo text match plugin which uses the OpenCalais web service to analyse text and extract entities and statements
+Comment[nds]=Dat Scribo-Textsöökmoduul, dat den Nettdeenst "OpenCalais" för't Ünnersöken vun Text un Ruttrecken vun Eenheiten un Utsagen bruukt.
+Comment[pt]='Plugin' de correspondência de texto do Scribo que usa o serviço da Web OpenCalais para analisar o texto e extrair entidades e frases
 Comment[uk]=Додаток пошуку тексту Scribo, який використовує службу OpenCalais для аналізу тексту і видобування категорій і записів
+Comment[x-test]=xxScribo text match plugin which uses the OpenCalais web service to analyse text and extract entities and statementsxx
 X-KDE-ServiceTypes=Scribo/TextMatchPlugin
 Type=Service
 X-KDE-Library=scribo_opencalaistextmatchplugin

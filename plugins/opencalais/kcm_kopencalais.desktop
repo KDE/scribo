@@ -3,9 +3,15 @@ Exec=kcmshell4 kcm_kopencalais
 Icon=nepomuk
 Type=Service
 Name=Open Calais
+Name[nds]=OpenCalais
+Name[pt]=Open Calais
 Name[uk]=Open Calais
+Name[x-test]=xxOpen Calaisxx
 Comment=Configure the Open Calais Scribo plugin
+Comment[nds]=Dat Scribo-Moduul "Open Calais" instellen
+Comment[pt]=Configurar o 'plugin' de Open Calais do Scribo
 Comment[uk]=Налаштувати додаток Scribo Open Calais
+Comment[x-test]=xxConfigure the Open Calais Scribo pluginxx
 
 X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_kopencalais
