@@ -5,11 +5,15 @@ Type=Service
 Name=Open Calais
 Name[nds]=OpenCalais
 Name[pt]=Open Calais
+Name[pt_BR]=Open Calais
+Name[sv]=Open Calais
 Name[uk]=Open Calais
 Name[x-test]=xxOpen Calaisxx
 Comment=Configure the Open Calais Scribo plugin
 Comment[nds]=Dat Scribo-Moduul "Open Calais" instellen
 Comment[pt]=Configurar o 'plugin' de Open Calais do Scribo
+Comment[pt_BR]=Configura o plug-in do Scribo para o Open Calais
+Comment[sv]=Anpassa insticksprogrammet Open Calais för Scribo
 Comment[uk]=Налаштувати додаток Scribo Open Calais
 Comment[x-test]=xxConfigure the Open Calais Scribo pluginxx
 
