@@ -3,6 +3,7 @@ Exec=kcmshell4 kcm_kopencalais
 Icon=nepomuk
 Type=Service
 Name=Open Calais
+Name[de]=Open Calais
 Name[et]=Open Calais
 Name[nds]=OpenCalais
 Name[pt]=Open Calais
