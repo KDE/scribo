@@ -4,6 +4,7 @@ X-KDE-ServiceType=Scribo/TextMatchPlugin
 
 Comment=Scribo text match plugin
 Comment[et]=Scribo tekstivastavuse plugin
+Comment[km]= 
 Comment[nds]=Scribo-Textsöökmoduul
 Comment[nl]=Plugin voor Scribo-tekst overeenkomst
 Comment[pt]='Plugin' de correspondência de texto do Scribo
