@@ -104,10 +104,9 @@ void PimoTextMatchPlugin::WorkThread::buildTokenTree()
     if(!m_tokenTree) {
         m_tokenTree = new TokenTree();
         // populatre tree with all resources that have a nao:prefLabel - urgh, this could be big!
-        Nepomuk::Query::Query query(
-                    Nepomuk::Query::ComparisonTerm( Soprano::Vocabulary::NAO::prefLabel(), Nepomuk::Query::Term())
-                    );
-        query.addRequestProperty(Nepomuk::Query::Query::RequestProperty(Soprano::Vocabulary::NAO::prefLabel(), false));
+        Nepomuk::Query::ComparisonTerm term( Soprano::Vocabulary::NAO::prefLabel(), Nepomuk::Query::Term());
+        term.setVariableName(QLatin1String("label"));
+        Nepomuk::Query::Query query(term);
 
         kDebug() << query.toSparqlQuery();
 
@@ -116,7 +115,7 @@ void PimoTextMatchPlugin::WorkThread::buildTokenTree()
                                                                                   Soprano::Query::QueryLanguageSparql );
         while ( !m_canceled && it.next() ) {
             const QUrl res( it[0].uri() );
-            const QString label( it[1].toString() );
+            const QString label( it[QLatin1String("label")].toString() );
             m_tokenTree->add(label, QVariant::fromValue(res));
         }
     }
