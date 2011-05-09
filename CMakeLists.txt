@@ -4,7 +4,7 @@ project(scribo)
 # ===============================================================================================
 set(CMAKE_SCRIBO_VERSION_MAJOR 0)
 set(CMAKE_SCRIBO_VERSION_MINOR 2)
-set(CMAKE_SCRIBO_VERSION_RELEASE 1)
+set(CMAKE_SCRIBO_VERSION_RELEASE 60)
 set(CMAKE_SCRIBO_VERSION "${CMAKE_SCRIBO_VERSION_MAJOR}.${CMAKE_SCRIBO_VERSION_MINOR}.${CMAKE_SCRIBO_VERSION_RELEASE}")
 
 
