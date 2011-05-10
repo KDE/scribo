@@ -1,5 +1,6 @@
 0.2.2
   * The PIMO plugin is now enabled by default.
+  * The OpenCalais plugin is now disabled by default.
 
 0.2.1
   * Slightly improved query to fill the PIMO plugin token tree.
