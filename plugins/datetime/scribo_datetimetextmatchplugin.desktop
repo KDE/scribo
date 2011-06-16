@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Datetime text match plugin
 Name[et]=Kuupäeva ja kellaaja tekstivastavuse plugin
+Name[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ​កាលបរិច្ឆេទ និង​ពេលវេលា
 Name[nds]=Datum- un Tietsöökmoduul
 Name[nl]=Plugin voor datumtijd-tekst overeenkomst
 Name[pt]='Plugin' de correspondência de datas/horas
@@ -10,6 +11,7 @@ Name[uk]=Додаток пошуку тексту дати і часу
 Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
 Comment[et]=Scribo tekstivastavuse plugin, mis hangib tekstist kuupäevad ja kellaajad ning esitab need lihtavaldistena
+Comment[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ Scribo ដែល​ស្រង់​កាល​បរិច្ឆេទ និង​ពេលវេលា​ចេញពី​អត្ថបទ និង​បង្ហាញ​វា​ជា​សេចក្ដី​ថ្លែងការណ៍​ធម្មតា
 Comment[nds]=Dat Scribo-Textsöökmoduul söcht Daten un Tieden binnen den Text un stellt de as eenfach Utsagen dor
 Comment[nl]=Plugin voor Scribo-tekst overeenkomst die datums en tijden uit de tekst haalt en ze las eenvoudige statement laat zien
 Comment[pt]='Plugin' de correspondência de texto do Scribo que extrai datas e horas do texto e as apresenta como frases simples
