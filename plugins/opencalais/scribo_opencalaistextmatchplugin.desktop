@@ -2,6 +2,7 @@
 Name=OpenCalais text match plugin
 Name[et]=OpenCalais' tekstivastavuse plugin
 Name[fr]=Module externe de correspondance de texte Open Calais
+Name[gl]=Engadido de procura de texto OpenCalais
 Name[hu]=OpenCalais szövegilleszkedés bővítmény
 Name[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ OpenCalais
 Name[nb]=Modul for tekst-treff i Open Calais
@@ -16,6 +17,7 @@ Name[x-test]=xxOpenCalais text match pluginxx
 Comment=Scribo text match plugin which uses the OpenCalais web service to analyse text and extract entities and statements
 Comment[et]=Scribo tekstivastavuse plugin, mis kasutab teksti analüüsimiseks OpenCalais' veebiteenust ning hangib olemid ja avaldised
 Comment[fr]=Module externe de correspondance de texte Scribo qui utilise le service web OpenCalais pour analyser du texte et extraire des entités et des instructions
+Comment[gl]=O engadido de procura de texto Scribo usa o servizo web OpenCalais para analizar texto e extraer entidades e definicións
 Comment[km]=កម្មវិធី​ជំនួយ​ផ្គូផ្គង​អត្ថបទ Scribo text match plugin ដែល​ប្រើ​សេវាកម្ម​បណ្ដាញ OpenCalais ដើម្បី​វិភាគ​អត្ថបទ ស្រង់​ធាតុ និង​សេចក្ដី​ថ្លែងការណ៍
 Comment[nb]=Scribo-modul for tekst-treff som bruker vevtjenesten OpenCalais for å analysere tekst og trekke ut entiteter og utsagn
 Comment[nds]=Dat Scribo-Textsöökmoduul, dat den Nettdeenst "OpenCalais" för't Ünnersöken vun Text un Ruttrecken vun Eenheiten un Utsagen bruukt.
