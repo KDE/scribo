@@ -5,6 +5,7 @@ X-KDE-Library=nepomukscriboservice
 X-KDE-Nepomuk-autostart=true
 X-KDE-Nepomuk-start-on-demand=false
 Name=Nepomuk Scribo Service
+Name[bs]=Servis Scribo Nepomuka 
 Name[cs]=Služba Nepomuk Scribo
 Name[de]=Nepomuk-Scribo-Dienst
 Name[et]=Nepomuki Scribo teenus
