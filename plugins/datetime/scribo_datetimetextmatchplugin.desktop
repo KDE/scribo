@@ -19,6 +19,7 @@ Name[tr]=Tarih saat metin eşleştirme eklentisi
 Name[uk]=Додаток пошуку тексту дати і часу
 Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
+Comment[de]=Dieses Modul extrahiert Datum und Zeiten aus dem Text und präsentiert sie als einfache Aussagen
 Comment[et]=Scribo tekstivastavuse plugin, mis hangib tekstist kuupäevad ja kellaajad ning esitab need lihtavaldistena
 Comment[fr]=Module externe Scribo de correspondance de texte extrayant des dates et heures depuis le texte et les présentant sous forme d'instructions simples
 Comment[gl]=O engadido de procura de texto extrae datas e horas do texto e indícaas de xeito simple

@@ -26,6 +26,7 @@ Name[tr]=Nepomuk Scribo Hizmeti
 Name[uk]=Служба Scribo Nepomuk
 Name[x-test]=xxNepomuk Scribo Servicexx
 Comment=The Nepomuk Scribo service offers a simple interface to Scribo's NLP facilities.
+Comment[de]=Dieser Dienst stellt ein einfache Schnittstelle für die NLP-Funktionen von Scribo bereit.
 Comment[et]=Nepomuki Scribo teenus pakub lihtsat liidest Scribo NLP omadustele.
 Comment[fr]=Le service Scribo pour Nepomuk offre une interface simple pour les fonctions de « NLP » de Scribo.
 Comment[gl]=O servizo de Scribo de Nepomuk fornece unha interface sinxela para as capacidade de NLP de Scribo.
