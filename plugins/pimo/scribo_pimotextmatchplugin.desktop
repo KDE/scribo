@@ -2,6 +2,7 @@
 Name=Pimo text match plugin
 Name[bs]=Pimo tekst oznacavacki dodatak
 Name[de]=Pimo-Textübereinstimmungs-Modul
+Name[es]=Complemento de búsqueda de texto de Pimo
 Name[et]=PIMO tekstivastavuse plugin
 Name[fr]=Module externe Pimo de correspondance de texte
 Name[gl]=Engadido de procura de texto Pimo
@@ -23,6 +24,7 @@ Name[x-test]=xxPimo text match pluginxx
 Comment=Scribo text match plugin which simply tries to match words in the text to Pimo things in Nepomuk
 Comment[bs]=Scribo tekst oznacavacki dodatak koji jednostavno trazi da oznaci rijeci u tekstu  Pimo stvari u Nepomuk
 Comment[de]=Dieses Module sucht Übereinstimmungen in den Wörtern des Textes mit Pimo-Daten in Nepomuk
+Comment[es]=El complemento de búsqueda de texto de Scribo trata de mapear palabras del texto al modelo de información personal (PIMO) de Nepomuk
 Comment[et]=Scribo tekstivastavuse plugin, mis lihtsalt püüab seada tekstis esinevad sõnad vastavusse Nepomuki PIMO asjadega
 Comment[fr]=Module externe Scribo de correspondance de texte tentant simplement d'apparier des mots du texte avec des éléments « Pimo » dans Nepomuk
 Comment[gl]=Engadido de procura de texto que simplemente intenta cadrar as palabras do texto con elementos de Pimo en Nepomuk

@@ -2,6 +2,7 @@
 Name=Datetime text match plugin
 Name[bs]=datum,vrijeme tekst oznacavacki dodatak
 Name[de]=Textübereinstimmungs-Modul für Datum und Zeit
+Name[es]=Complemento de búsqueda de fechas y horas
 Name[et]=Kuupäeva ja kellaaja tekstivastavuse plugin
 Name[fr]=Module externe de correspondance de dates et d'heures dans un texte
 Name[gl]=Complemento de procura de texto de datas e horas
@@ -23,6 +24,7 @@ Name[x-test]=xxDatetime text match pluginxx
 Comment=Scribo text match plugin which extracts dates and times from the text and presents them as simple statements
 Comment[bs]=Scribo tekst oznacavacki    dodatak koji ekstraktuje datume i vremena iz teksta i prezentira ih kao jednostavne izvjestaje
 Comment[de]=Dieses Modul extrahiert Datum und Zeiten aus dem Text und präsentiert sie als einfache Aussagen
+Comment[es]=El complemento de búsqueda de texto de Scribo extrae fechas y horas de un texto y las presenta como una sentencia
 Comment[et]=Scribo tekstivastavuse plugin, mis hangib tekstist kuupäevad ja kellaajad ning esitab need lihtavaldistena
 Comment[fr]=Module externe Scribo de correspondance de texte extrayant des dates et heures depuis le texte et les présentant sous forme d'instructions simples
 Comment[gl]=O engadido de procura de texto extrae datas e horas do texto e indícaas de xeito simple
